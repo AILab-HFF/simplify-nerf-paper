@@ -12,3 +12,5 @@
 *.bcf
 *.fdb_latexmk
 *.fls
+main.dvi
+main.out.ps
