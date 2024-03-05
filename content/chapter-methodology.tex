@@ -3,22 +3,65 @@
 \chapter{Methodology}
 \label{sec:methodology}
 
-\cleanchapterquote{Users do not care about what is inside the box, as long as the box does what they need done.}{Jef Raskin}{about Human Computer Interfaces}
-
 \section{Research Design}
-\label{sec:methodology:sec1}
+\label{sec:methodology:design}
+
+The research was planned in three distinct phases, initial user research, development of the prototype and user testing. Each of these phases and informs the one building on it. 
 
 \section{Initial User Research}
 \label{sec:methodology:user-research}
 
+The initial round of user interviews was conducted with to gather insights for the development of a user-friendly NeRF interface. The focus was on understanding the needs, challenges and preferences of users with varying levels of experience with the creation of NeRF models.
+
 \subsection{Participant Selection Criteria}
 \label{sec:methodology:user-research:criteria}
+
+Participant were selected based on there pre-existing experience with NeRF and some association to the film industry. They represent a wide range of experiences and technical knowledge of NeRF, but also applied the technology in different contexts.
+
+This diversity in users helped to identify common needs and challenges, as well as to understand the specific requirements of different user groups.
 
 \subsection{Interview Methodology}
 \label{sec:methodology:user-research:interview}
 
+The interviews themselves were semi-structured, following a set of predefined questions (\ref{sec:appendix:interview-questions}), while also allowing for open-ended discussions and follow-up questions. 
+The interviews were conducted in a one-on-one setting, either in person or via video call, and lasted between 30 and 60 minutes. Although the interview template was prepared in english, all interviews were conducted in german.
+
+Questions followed a logical flow, starting with general background information and moving on to more specific needs and preferences. 
+After being introduced to the purposes of the interview and the goals of this research, participants were questioned about their experience with NeRF and the tasks they typically aim to achieve when working with NeRF. 
+They were asked what challenges or pain points they encounter when using current NeRF frameworks or interfaces, and what features or functionalities would make a NeRF interface most useful for their work or research.
+Interviewees were encouraged to share there own thoughts and suggestions on the development of a NeRF interface.
+
+With the agreement of participants, the interviews were recorded and transcribed for further analysis. 
+The data was then coded and categorized to identify common themes and patterns across the interviews.
+
 \subsection{Key Findings}
 \label{sec:methodology:user-research:findings}
+
+\subsubsection{NeRF in the Film Industry}
+
+There exist different applications of NeRF in the film industry, ranging from traditional visual effects to virtual production and location scouting in the pre-production phase. 
+Tradition creation and animation of 3D scenes is costly and time-consuming, and NeRF is seen as a potential solution to this problem. 
+
+Some participants expressed their concerns about the quality of current NeRF models, that is often not sufficient for professional use.
+Lack of detail and visual artifacts in the scene were mentioned as common issues.
+Additionally it lacks the ability to edit and manipulate the models when compared to traditional 3D models, which presents a crucial limitation for the application in a creative industry like film, where models are iteratively developed and refined.
+
+A more realistic use-case of NeRF in the film industry, with the technologies current limitations, is the use in pre-visualization and location scouting.
+The ability to quickly capture and render 3D scenes from real-world locations is seen as a potential time-saver in the pre-production phase of film-making.
+Models can be used to plan camera movements and lighting, and to get a better understanding of the spatial relations between different elements in the scene.
+One concern raised in this context was the lack of accurate scale of the models, when exporting them into other 3D software.
+
+\subsubsection{Optimizing Paramters and Workflow}
+
+A typical workflow when creating NeRFs follows three steps, first the input data has to be pre-processed, then the actual model training is done and finally the some data is exported. 
+Parameterization in the pre-processing and training phases can have a profound impact on the quality of the final NeRF. 
+This was noted be by participants with a technical background, that were working with NeRF in a research context.
+For them the optimization of parameters is an integral part of there workflow, often re-training models multiple times, in order to analyze the variation in the results.
+Results can be quantified with tooling to analyze runs, such as TensorBoards.
+
+\subsubsection{User Interface and User Experience}
+
+Participants 
 
 \section{Prototype Development}
 \label{sec:methodology:proptotype}
@@ -29,14 +72,36 @@
 \subsection{Design Considerations}
 \label{sec:methodology:proptotype:design}
 
-\section{User Testing}
-\label{sec:methodology:testing}
+\section{User Study and Evaluation}
+\label{sec:methodology:study}
+
+To evaluated the usability and usefulness of the developed prototype, a user study was conducted. 
+The study followed a mixed-methods approach, combining quantitative and qualitative data collection and analysis. 
+Participants were given a set of tasks to complete with the prototype, and were then asked to fill out a questionnaire and participate in a short follow-up interview.
+
+\subsection{Tasks Based Usability Test}
+\label{sec:methodology:study:tasks}
+
+The usability test was conducted in a controlled environment, with participants being asked to complete a two tasks with the prototype.
+The tasks were designed to cover a range of functionalities and features of the prototype, and represent a typical workflow when creating NeRF models.
+
+\begin{enumerate}
+  \item Task: Create a NeRF model from a set of input images
+  \item Task: Export the created NeRF model into a video.
+  \item Task: Edit the created NeRF model using prompts.
+\end{enumerate}
+
+Participant were passively observed while working on their tasks, to identify any problems or operation errors they encountered and to determine their overall performance.
 
 \subsection{Quantitative Analysis}
-\label{sec:methodology:testing:quantitative}
+\label{sec:methodology:study:quantitative}
+
+After completing their tasks, users were asked to fill out the User Experience Questionnaire (UEQ) \cite{ueq}, a standardized questionnaire for the assessment of user experience.
+It measure user experience in six dimensions: Attractiveness, Perspicuity, Efficiency, Dependability, Stimulation, and Novelty.
+% TODO: elaborate
 
 \subsection{Qualitative Analysis}
-\label{sec:methodology:testing:qualitative}
+\label{sec:methodology:study:qualitative}
 
-
+Finally participants were engaged in a short follow-up interview, to gather more detailed feedback on their experience with the prototype. (see \ref{sec:appendix:questionnaire})
 
