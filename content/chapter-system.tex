@@ -3,9 +3,6 @@
 \chapter{Technical Implementation}
 \label{sec:system}
 
-\cleanchapterquote{Innovation distinguishes between a leader and a follower.}{Steve Jobs}{(CEO Apple Inc.)}
-
-
 \section{System Architecture}
 \label{sec:system:architecture}
 
@@ -19,9 +16,12 @@ Requests from the client were sent to the server using HTTP requests, and in cas
 
 \begin{figure}[htb]
 	\includegraphics[width=\textwidth]{figures/architecture-1.png}
-	\caption{Another Figure example: \textit{(a)} example part one, \textit{(c)} example part two; \textit{(c)} example part three}
+	\caption{System Architecture}
 	\label{fig:system:example2}
 \end{figure}
+
+For the prototype, all the components were composed into a single docker container and deployed as a single unit.
+This leveraged the pre-configured container provided by nerfstudio, and allowed for a quick and easy deployment of the prototype.
 
 \section{Frontend Development} 
 \label{sec:system:frontend}
@@ -29,11 +29,25 @@ Requests from the client were sent to the server using HTTP requests, and in cas
 % Setup, configuration, and component architecture
 % UI/UX design principles
 
+The frontend was built with React, as it is a popular and well supported framework for building web applications.
+Vite was used as a build tool, as it provides a fast and efficient development experience.
+To accelerate the styling process, Tailwind CSS was used, it is a utility-first CSS framework that provides a set of pre-defined classes that can be used to style components.
+In additional the daisyUI component library provided a set of pre-styled components that could be used to quickly build the UI.
+
+Extensibility was a key considerations during the development of the frontend, ... 
+
+% TDOD: add more details
+
 
 \section{Backend Development}
 \label{sec:system:backend}
 
 % Advantages of tRPC, configuration, and API design
+
+The backend was built using tRPC, a framework for building type-safe APIs in TypeScript.
+This type-safety was useful in building the API, as nerfstudio endpoints require a specific set of parameters of various types, that could be easily defined using TypeScript and reused in the frontend.
+
+With tRPC, 
 
 \section{Challenges and Solutions}
 \label{sec:system:challenges}
