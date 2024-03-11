@@ -34,9 +34,40 @@ Vite was used as a build tool, as it provides a fast and efficient development e
 To accelerate the styling process, Tailwind CSS was used, it is a utility-first CSS framework that provides a set of pre-defined classes that can be used to style components.
 In additional the daisyUI component library provided a set of pre-styled components that could be used to quickly build the UI.
 
-Extensibility was a key considerations during the development of the frontend, ... 
+\subsubsection{Extensibility}
 
-% TDOD: add more details
+Extensibility was a key considerations during the development of the frontend, as the underlying nerfstudio CLI is in itself extendable.
+All parameters for processing and training a NeRF model are configurable using JSON or strongly typed TypeScript objects.
+
+\begin{lstlisting}[caption=Parameter Option configuration]
+const stepsPerSave: NumberInput = {
+	name: "stepsPerSave",
+	label: "Steps Per Save",
+	tooltip: "Number of steps between each save of the model.",
+	inputType: "number",
+	defaultValue: 1000,
+};
+\end{lstlisting}
+
+Currently the supported input types are: number, select and boolean, but it is easy to add new types by extending the configuration object. 
+It is also possible to define dependent parameters, that are only shown when a certain condition is met.
+Images to illustrate the effect of a parameter can be added as well, to provide additional context to the user.
+
+Filters and presets are also configurable using arrays of the names of the parameters that should be included in the filter or preset.
+The full configuration can be found in the \texttt{frontend/src/config} folder in the codebase.
+
+\subsubsection{Nerfstudio Viewer Integration}
+
+The nerfstudio viewer is built using Viser, a library for building 3D visualizations using python.
+This posed some limitations in integrating it into the frontend, as it is not easily possible to directly embed a python application into a web application.
+To work around this, the viewer was hosted by nerfstudio as usual and embedded into the frontend using an iframe.
+
+Some modifications could be made to the viewer to make it more suitable for embedding.
+This included some simple styling changes to make the viewer fit better into the frontend.
+The viewer contained several interactions where it was necessary for the user to copy console commands, to be used in the CLI.
+These interactions were replaced with buttons that send a request to the server to execute the command instead.
+
+These modifications were done at build-time of the container by applying a patch to the nerfstudio source code of the base image.
 
 
 \section{Backend Development}

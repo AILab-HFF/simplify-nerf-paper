@@ -1,0 +1,7 @@
+const stepsPerSave: NumberInput = {
+^^Iname: "stepsPerSave",
+^^Ilabel: "Steps Per Save",
+^^Itooltip: "Number of steps between each save of the model.",
+^^IinputType: "number",
+^^IdefaultValue: 1000,
+};
