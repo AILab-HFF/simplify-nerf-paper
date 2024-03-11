@@ -41,6 +41,12 @@ Projects are represented as cards, showing the project name, a preview of on the
 An additional card is present through which users can create a new project, by providing a name.
 Projects can be opened by clicking a button on the respective card, when creating a new project, users are redirected to the project section.
 
+\begin{figure}[htb]
+  \includegraphics[width=\textwidth]{figures/view-overview.png}
+  \caption{Dashboard}
+  \label{fig:design:dashboard}
+\end{figure}
+
 \subsection{Project Section}
 
 The project section is the core of the application, through which users can create and edit NeRF models.
@@ -59,12 +65,24 @@ Once the user is satisfied with the settings, they can start the pre-processing.
 Feedback on the progress of the pre-processing is given through a console that shows the output of the process running on the server.
 When the pre-processing is finished, the user can move on to the training section. 
 
+\begin{figure}[htb]
+  \includegraphics[width=\textwidth]{figures/view-process.png}
+  \caption{Processing Input Data}
+  \label{fig:design:input-section}
+\end{figure}
+
 In case the data was already pre-processed, a list ist visible that shows all available pre-processed data, and the user can select one to use for training.
 Users can also inspect the configuration with which the data was pre-processed, and delete it if necessary.
 
 \subsubsection{Training Section}
 
 The training section is structured similarly to the input section, with a form that allows users to configure the training process, and a console that shows the output of the training process running on the server.
+
+\begin{figure}[htb]
+  \includegraphics[width=\textwidth]{figures/view-train.png}
+  \caption{Training Section}
+  \label{fig:design:training-section}
+\end{figure}
 
 \subsubsection{Rendering Section}
 
@@ -73,3 +91,8 @@ At its core is the Nerfstudio Viewer that is integrated into the application.
 It provides users with all the functionality available in the standalone version, with a few integration that simplify the render process.
 Instead of providing commands that have to be executed in the terminal, the rendering is started by clicking a button.
 
+\begin{figure}[htb]
+  \includegraphics[width=\textwidth]{figures/view-viewer.png}
+  \caption{Viewer Section}
+  \label{fig:design:viewer-section}
+\end{figure}
