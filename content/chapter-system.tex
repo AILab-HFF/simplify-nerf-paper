@@ -60,12 +60,15 @@ The full configuration can be found in the \texttt{frontend/src/config} folder i
 
 The nerfstudio viewer is built using Viser, a library for building 3D visualizations using python.
 This posed some limitations in integrating it into the frontend, as it is not easily possible to directly embed a python application into a web application.
-To work around this, the viewer was hosted by nerfstudio as usual and embedded into the frontend using an iframe.
+To work around this, the viewer was hosted by nerfstudio and embedded into the frontend using an iframe.
 
 Some modifications could be made to the viewer to make it more suitable for embedding.
 This included some simple styling changes to make the viewer fit better into the frontend.
+More complex changes were also made to improve the user experience.
 The viewer contained several interactions where it was necessary for the user to copy console commands, to be used in the CLI.
 These interactions were replaced with buttons that send a request to the server to execute the command instead.
+
+This main shortcoming of this approach is that the frontend is unaware of the state of the viewer, and cannot update the UI based on action triggered in the viewer. It has to rely on polling the server to get the current state of rendering processes to give feedback to the user.
 
 These modifications were done at build-time of the container by applying a patch to the nerfstudio source code of the base image.
 
