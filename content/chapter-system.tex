@@ -139,7 +139,7 @@ All these limitations could be solved by using a more general purpose framework,
 \subsection{Working with the nerfstudio CLI}
 
 Building the prototype against the nerfstudio CLI offered a useful layer of abstraction.
-It allowed for enabled rapid development, without having to worry about the underlying implementation details of a huge codebase.
+This enabled rapid development, without having to worry about the underlying implementation details of a huge codebase.
 However, this abstraction comes at the cost of flexibility and overall complexity of the system.
 
 The CLI is built using tyro \cite{yi_brentyityro_2024}, a tool for building command line interfaces in Python using configuration objects.
@@ -155,3 +155,24 @@ Thus the implemented solution has to rely on manually constructing the commands 
 
 \section{Future Directions}
 \label{sec:system:future}
+
+\subsection{Improved CLI Integration}
+
+As outlined above the approach of wrapping the nerfstudio CLI with a custom API has some limitations.
+A more integrated and robust solution would be built within the nerfstudio codebase itself.
+
+A possible solution might be able to re-use the existing configuration object, used for CLI, to build a REST API.
+This would allow for a more seamless integration of the CLI into the frontend, and would allow for more flexibility in the future.
+It would also reduce the overall complexity of the system, as it would not require a separate server to handle requests.
+
+\subsection{Improved Viewer Integration}
+
+The current approach of embedding the viewer in an iframe is not ideal.
+The nerfstudio viewer in version 0.3.4 and earlier, was built using React with a direct integration of Viser.
+With the first major release of nerfstudio, the viewer was rewritten in Python, and the React integration was removed.
+
+Re-building this projects frontend with a framework such as Viser, would be very limiting in terms of features and flexibility.
+A better solution would be to integrate Viser into the frontend, akin to the original nerfstudio viewer.
+This integration would allow for a more seamless interaction between the frontend and the viewer, and improve the overall user experience.
+UI elements could be re-used to ensure a consistent look and feel, and the frontend could react to events triggered in the viewer.
+
