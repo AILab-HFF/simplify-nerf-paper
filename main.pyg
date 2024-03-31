@@ -1,7 +1,29 @@
-const stepsPerSave: NumberInput = {
-^^Iname: "stepsPerSave",
-^^Ilabel: "Steps Per Save",
-^^Itooltip: "Number of steps between each save of the model.",
-^^IinputType: "number",
-^^IdefaultValue: 1000,
-};
+^^Iimport numpy as np
+^^I^^I^^I
+^^Idef incmatrix(genl1,genl2):
+^^I^^I^^Im = len(genl1)
+^^I^^I^^In = len(genl2)
+^^I^^I^^IM = None #to become the incidence matrix
+^^I^^I^^IVT = np.zeros((n*m,1), int)  #dummy variable
+^^I^^I^^I
+^^I^^I^^I#compute the bitwise xor matrix
+^^I^^I^^IM1 = bitxormatrix(genl1)
+^^I^^I^^IM2 = np.triu(bitxormatrix(genl2),1)
+^^I
+^^I^^I^^Ifor i in range(m-1):
+^^I^^I^^I^^I^^Ifor j in range(i+1, m):
+^^I^^I^^I^^I^^I^^I^^I[r,c] = np.where(M2 == M1[i,j])
+^^I^^I^^I^^I^^I^^I^^Ifor k in range(len(r)):
+^^I^^I^^I^^I^^I^^I^^I^^I^^IVT[(i)*n + r[k]] = 1;
+^^I^^I^^I^^I^^I^^I^^I^^I^^IVT[(i)*n + c[k]] = 1;
+^^I^^I^^I^^I^^I^^I^^I^^I^^IVT[(j)*n + r[k]] = 1;
+^^I^^I^^I^^I^^I^^I^^I^^I^^IVT[(j)*n + c[k]] = 1;
+^^I^^I^^I^^I^^I^^I^^I^^I^^I
+^^I^^I^^I^^I^^I^^I^^I^^I^^Iif M is None:
+^^I^^I^^I^^I^^I^^I^^I^^I^^I^^I^^IM = np.copy(VT)
+^^I^^I^^I^^I^^I^^I^^I^^I^^Ielse:
+^^I^^I^^I^^I^^I^^I^^I^^I^^I^^I^^IM = np.concatenate((M, VT), 1)
+^^I^^I^^I^^I^^I^^I^^I^^I^^I
+^^I^^I^^I^^I^^I^^I^^I^^I^^IVT = np.zeros((n*m,1), int)
+^^I^^I^^I
+^^I^^I^^Ireturn M
