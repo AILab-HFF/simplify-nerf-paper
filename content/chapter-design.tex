@@ -34,7 +34,7 @@ These diagrams were used as a reference throughout the design and development pr
 The user interface was designed to be as simple as possible, while still providing all necessary functionality. 
 The design of the prototype can be broken down into two main parts: a dashboard that gives an overview of all projects and a project section that provides users with the tools to create and edit NeRF models.
 
-\subsection{Dashboard}
+\subsection*{Dashboard}
 
 The dashboard is the first view that users see when opening the application. It shows all previously created projects and allows users to create new ones. 
 Projects are represented as cards, showing the project name, a preview of on the provided input images (if present), and tags the indicate the current status of the project.
@@ -47,7 +47,7 @@ Projects can be opened by clicking a button on the respective card, when creatin
   \label{fig:design:dashboard}
 \end{figure}
 
-\subsection{Project Section}
+\subsection*{Project Section}
 
 The project section is the core of the application, through which users can create and edit NeRF models.
 The section is divided into three parts: the input section, the training section, and the rendering section.
@@ -108,7 +108,7 @@ Due to the narrow layout of the page, the viewer can easily be opened in a new t
 
 \section{Design Language}
 
-\subsection{Layout}
+\subsection*{Layout}
 
 The layout of the application is kept minimalistic, its main objective is to guide the user through the process of creating a NeRF model, and keep them informed about the progress.
 
@@ -117,7 +117,7 @@ Interactions that require previous user input, appear only when necessary, and a
 As an example, in the processing section, only the upload card is visible, until the user has uploaded some data, then the processing card appears.
 This helps user to focus on the task at hand, and guide them through the process.
 
-\subsection{Theming}
+\subsection*{Theming}
 
 The application support a light and a dark theme, that can be toggled by the user and uses the user's system preference as a default.
 The themes are designed to be easy on the eyes, and to provide a good contrast between different elements.

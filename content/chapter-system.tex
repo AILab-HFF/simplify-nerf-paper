@@ -120,7 +120,7 @@ This allows for the data to persist between container restarts, and for the user
 \section{Challenges and Solutions}
 \label{sec:system:challenges}
 
-\subsection{Limitations of tRPC}
+\subsection*{Limitations of tRPC}
 
 Although tRPC is a powerful tool for building APIs, with tight a tight integration into the frontend, it is not without its limitations.
 
@@ -136,7 +136,7 @@ This required the implementation of another separate endpoint using Express, whi
 
 All these limitations could be solved by using a more general purpose framework, such as Express.
 
-\subsection{Working with the nerfstudio CLI}
+\subsection*{Working with the nerfstudio CLI}
 
 Building the prototype against the nerfstudio CLI offered a useful layer of abstraction.
 This enabled rapid development, without having to worry about the underlying implementation details of a huge codebase.
@@ -152,7 +152,7 @@ Thus the implemented solution has to rely on manually constructing the commands 
 \section{Future Directions}
 \label{sec:system:future}
 
-\subsection{Improved CLI Integration}
+\subsection*{Improved CLI Integration}
 
 As outlined above the approach of wrapping the nerfstudio CLI with a custom API has some limitations.
 A more integrated and robust solution would be built within the nerfstudio codebase itself.
@@ -161,7 +161,7 @@ A possible solution might be able to re-use the existing configuration object, u
 This would allow for a more seamless integration of the CLI into the frontend, and would allow for more flexibility in the future.
 It would also reduce the overall complexity of the system, as it would not require a separate server to handle requests.
 
-\subsection{Improved Viewer Integration}
+\subsection*{Improved Viewer Integration}
 
 The current approach of embedding the viewer in an iframe is not ideal.
 The nerfstudio viewer in version 0.3.4 and earlier, was built using React with a direct integration of Viser.
