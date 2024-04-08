@@ -3,25 +3,26 @@
 \chapter{Introduction}
 \label{sec:intro}
 
-\section{Background}
-\label{sec:intro:background}
+% \section{Background}
+% \label{sec:intro:background}
 
-The present state of NeRF research presents significant advancements that have greatly influenced the field of 3D scene modeling and rendering. This section provides an overview of the current research landscape, highlighting key NeRF frameworks and relevant projects, and identifying the challenges and opportunities that inform our research objectives.
+Neural Radiance Fields (NeRF) have emerged as a transformative technology in 3D scene modeling and rendering, offering unprecedented realism and detail. 
+This advancement has significantly impacted various applications, from virtual reality to cultural heritage preservation. 
 
-Two prominent NeRF frameworks with user interfaces, namely Instant NGP \cite{muller_instant_2022} and Nerfstudio \cite{tancik_nerfstudio_2023}, have emerged as leaders in enabling users to explore and manipulate 3D scenes. These frameworks offer features such as real-time scene rendering, adjustable training parameters, and the creation of camera trajectories for video rendering.
-
-However, the utilization of these interfaces often demands a high level of technical expertise, as they are designed to complement, rather than replace, command-line interfaces. Users must engage with terminal-based processes for tasks such as video data preprocessing, model training, and rendering output.
+Two prominent NeRF frameworks with user interfaces, namely Instant NGP \cite{muller_instant_2022} and Nerfstudio \cite{tancik_nerfstudio_2023}, have emerged as leaders in enabling users to explore and manipulate 3D scenes. 
+These frameworks offer features such as real-time scene rendering, adjustable training parameters, and the creation of camera trajectories for video rendering.
 
 Additionally, several innovative projects have expanded the NeRF landscape. Notably, CLIP-NeRF \cite{wang_clip-nerf_2022}, Instruct-NeRF2NeRF \cite{haque_instruct-nerf2nerf_2023}, Text2LIVE \cite{bar-tal_text2live_2022}, and SINE \cite{bao_sine_2023} have introduced text-based editing approaches, broadening the possibilities for manipulating NeRF models. PaletteNeRF \cite{wu_palettenerf_2022} focuses on color editing, while NeRF-Editing \cite{yuan_nerf-editing_2022} enables mesh editing. 
 
-This research aims to identify key challenges and opportunities in NeRF frameworks and interfaces, as demonstrated by these significant contributions. This knowledge will guide the development of a user-friendly, web-based interface and integrated editing plugins, with the ultimate goal of enhancing the accessibility and usability of NeRF frameworks for a broader user base.
+Despite these advancements, the technical complexity of these frameworks frequently acts as a barrier to broader accessibility, indicating a need for improvements in user experience. 
+These interfaces usually require a high degree of technical knowledge, as they are intended to supplement, rather than substitute, command-line interfaces.
+For activities like video data preprocessing, model training, and output rendering, users are required to navigate through terminal-based processes.
+
+This complexity not only limits the potential user base to individuals with technical expertise but also hinders the creative and innovative application of NeRF technology across broader fields. 
+Consequently, there exists a critical need to enhance the user experience and develop solutions that simplify the interaction with NeRF frameworks, making them more approachable and usable for a diverse range of users beyond the realm of technical specialists.
 
 
-\section{Overview of NeRF}
-\label{sec:intro:nerf}
-
-
-\section{Research Objectives}
+\section*{Research Objectives}
 \label{sec:intro:objectives}
 
 The research objectives of this study are as follows:
@@ -39,8 +40,10 @@ The research objectives of this study are as follows:
 The research aims to advance NeRF frameworks' capabilities and accessibility, making them accessible to a broader audience and fostering innovation in 3D scene modeling and rendering.
 
 
-\section{Research Question}
+\section*{Research Question}
 \label{sec:intro:question}
+
+This research is guided by the following questions:
 
 \begin{enumerate}
     \item \textbf{Enhancing NeRF Frameworks:} How can a web-based interface improve the user experience and accessibility of NeRF frameworks, and what impact will these enhancements have on user-friendly NeRF creation and manipulation?
@@ -50,68 +53,22 @@ The research aims to advance NeRF frameworks' capabilities and accessibility, ma
     \item \textbf{Innovative Editing Integration:} How can novel editing approaches be seamlessly integrated into a web-based NeRF interface to enhance creativity and usability, and how do these methods compare with traditional NeRF editing techniques?
 \end{enumerate}
 
+\section*{Scope of the Study}
+\label{sec:intro:scope}
+This research focuses on the development and evaluation of a web-based interface for NeRF, aiming to improve its accessibility and usability. 
+The study will concentrate on interface design, user interaction, and the integration of editing functionalities, without delving into the underlying algorithms of NeRF technology itself. 
+It is delimited by its emphasis on interface design over algorithmic advancements in NeRF processing.
 
-% \section{Methodology}
-% \label{sec:intro:methodology}
+\section*{Significance of the Study}
+\label{sec:intro:significance}
+By addressing the usability challenges of current NeRF frameworks, this research aims to make 3D scene modeling more accessible, fostering innovation and broadening the application of this technology across various fields. 
+The development of a web-based interface could significantly lower the entry barrier to NeRF, enabling artists, designers, and educators to leverage this technology without requiring deep technical expertise.
 
-% \subsection*{Understanding Current Interaction Methods in NeRF Frameworks}
-
-% \subsubsection{Literature Review}
-% Conduct an in-depth review of existing literature and research papers on NeRF frameworks to identify the current interaction methods being used. This includes understanding the different ways users engage with NeRF models, the tools and interfaces commonly employed, and their advantages and limitations.
-
-% \subsubsection{Survey and Interviews}
-% Create a survey or conduct interviews with researchers, practitioners, and students who have experience with NeRF frameworks. Gather insights on their interactions with NeRF models, their preferences for certain methods, and their opinions on the usability and efficiency of existing approaches.
-
-% \subsection*{Developing a Web-Based User Interface}
-
-% \subsubsection{Interface Design}
-% Design a user-friendly web-based interface for NeRF creation and editing. Consider intuitive navigation, clear instructions, and visual aids to simplify the process for users.
-
-% \subsubsection{Front-End Development}
-% Implement the designed interface using web development technologies and integrate existing projects such as Nerfstudio's viewer \cite{nerfstudio}. Ensure that the interface is responsive, interactive, and accessible on various devices and browsers.
-
-% \subsubsection{Server Setup with CI/CD}
-% Set up a server to host the web-based interface and implement a CI/CD pipeline. Ensure that the server is secure, reliable, and capable of handling user interactions and data storage. The CI/CD pipeline should facilitate automated testing and deployment of updates to the web-based interface, ensuring a smooth and efficient development process.
-
-% \subsection*{User Testing and Evaluation}
-
-% \subsubsection{User Group Selection}
-% Recruit a diverse group of participants, including HFF students and individuals with varying levels of experience in 3D modeling and computer graphics.
-
-% \subsubsection{Usability Testing}
-% Conduct usability tests where participants are given specific tasks to perform using the web-based NeRF interface. Observe their interactions, gather feedback, and identify any challenges or issues they encounter.
-
-% \subsubsection{Comparative Evaluation}
-% Compare the usability and efficiency of the web-based interface with existing methods. This could involve conducting user studies where participants use both the new interface and traditional methods, and then collecting data on factors like task completion time, user satisfaction, and ease of use.
-
-% \subsection*{Data Analysis and Interpretation}
-
-% \subsubsection{Quantitative Analysis}
-% Analyze quantitative data collected from usability tests and comparative evaluations. Use statistical methods to identify patterns, trends, and significant differences in performance between the web-based interface and traditional methods.
-
-% \subsubsection{Qualitative Analysis}
-% Analyze qualitative data from user feedback, interviews, and surveys. Extract valuable insights regarding user preferences, challenges, and suggestions for improvement.
-
-% \subsection*{Synthesis and Conclusion}
-
-% \subsubsection{Findings Synthesis}
-% Summarize the findings from the usability tests, evaluations, and user feedback. Compare these findings against the initial research questions to determine whether the objectives of the study were met.
-
-% \subsubsection{Conclusion}
-% Draw conclusions based on the research findings, discussing the implications of the results for NeRF framework interactions and user interface design. Highlight the contributions of the new web-based interface and its potential impact on NeRF adoption and usability.
-
-% \subsubsection{Future Directions}
-% Suggest potential avenues for further research and development in the field of NeRF interfaces and 3D modeling interactions.
-
-% \section{Thesis Structure}
+% TODO ?
+% \section*{Structure of the Thesis}
 % \label{sec:intro:structure}
+% The thesis is structured as follows:
 
-% \textbf{Chapter \ref{sec:related}} \\[0.2em]
-
-% \textbf{Chapter \ref{sec:system}} \\[0.2em]
-
-% \textbf{Chapter \ref{sec:concepts}} \\[0.2em]
-
-% \textbf{Chapter \ref{sec:concepts}} \\[0.2em]
-
-% \textbf{Chapter \ref{sec:conclusion}} \\[0.2em]
+% \textbf{Chapter 2: Related Works} reviews existing NeRF frameworks, user interfaces, and editing tools, providing context for this research.
+% \textbf{Chapter 3: Methodology} details the research methods employed in developing and evaluating the web-based interface.
+% Subsequent chapters will cover the development process, evaluation results, discussion, and conclusions, culminating in recommendations for future research.
