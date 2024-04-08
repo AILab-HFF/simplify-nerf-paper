@@ -24,7 +24,8 @@ This diversity in users helped to identify common needs and challenges, as well 
 \label{sec:methodology:user-research:interview}
 
 The interviews themselves were semi-structured, following a set of predefined questions (\ref{sec:appendix:interview-questions}), while also allowing for open-ended discussions and follow-up questions. 
-The interviews were conducted in a one-on-one setting, either in person or via video call, and lasted between 30 and 60 minutes. Although the interview template was prepared in english, all interviews were conducted in german.
+The interviews were conducted in a one-on-one setting, either in person or via video call, and lasted between 30 and 60 minutes. 
+Although the interview template was prepared in english, all interviews were conducted in german.
 
 Questions followed a logical flow, starting with general background information and moving on to more specific needs and preferences. 
 After being introduced to the purposes of the interview and the goals of this research, participants were questioned about their experience with NeRF and the tasks they typically aim to achieve when working with NeRF. 
@@ -37,27 +38,59 @@ The data was then coded and categorized to identify common themes and patterns a
 \subsection{Key Findings}
 \label{sec:methodology:user-research:findings}
 
-\subsubsection{NeRF in the Film Industry}
+\paragraph{NeRF in the Film Industry}
 
-There exist different applications of NeRF in the film industry, ranging from traditional visual effects to virtual production and location scouting in the pre-production phase. 
-Tradition creation and animation of 3D scenes is costly and time-consuming, and NeRF is seen as a potential solution to this problem. 
+NeRF technology is being explored for various applications in the film industry, such as visual effects, virtual production, and pre-production location scouting. 
+Despite its potential to simplify the creation of 3D scenes, current limitations in model quality, lack of editable models, and insufficient detail hinder its professional use. 
+However, its capability for quick 3D scene captures offers significant benefits for pre-visualization and planning in the pre-production phase, although concerns about model scale accuracy for export remain.
 
-Some participants expressed their concerns about the quality of current NeRF models, that is often not sufficient for professional use.
-Lack of detail and visual artifacts in the scene were mentioned as common issues.
-Additionally it lacks the ability to edit and manipulate the models when compared to traditional 3D models, which presents a crucial limitation for the application in a creative industry like film, where models are iteratively developed and refined.
+\paragraph{Optimizing Parameters and Workflow}
 
-A more realistic use-case of NeRF in the film industry, with the technologies current limitations, is the use in pre-visualization and location scouting.
-The ability to quickly capture and render 3D scenes from real-world locations is seen as a potential time-saver in the pre-production phase of film-making.
-Models can be used to plan camera movements and lighting, and to get a better understanding of the spatial relations between different elements in the scene.
-One concern raised in this context was the lack of accurate scale of the models, when exporting them into other 3D software.
+Creating NeRFs typically involves preprocessing input data, training models, and exporting outputs. 
+Technical users emphasize the importance of parameter optimization in improving NeRF quality, with iterative training and results analysis being crucial parts of their workflow. 
+Tools like TensorBoard are utilized for quantifying variations in training outcomes.
 
-\subsubsection{Optimizing Paramters and Workflow}
+\paragraph{User Interface and Accessibility}
 
-A typical workflow when creating NeRFs follows three steps, first the input data has to be pre-processed, then the actual model training is done and finally the some data is exported. 
-Parameterization in the pre-processing and training phases can have a profound impact on the quality of the final NeRF. 
-This was noted be by participants with a technical background, that were working with NeRF in a research context.
-For them the optimization of parameters is an integral part of there workflow, often re-training models multiple times, in order to analyze the variation in the results.
-Results can be quantified with tooling to analyze runs, such as TensorBoards.
+A consensus among users highlights the need for an intuitive, all-encompassing user interface that minimizes reliance on console commands. 
+Features that allow users to visually navigate and control the NeRF creation pipeline, including real-time progress feedback and the ability to pause and adjust processes at any stage, are highly valued.
+
+\paragraph{Web-Based Interfaces and Collaboration}
+
+Preferences have shifted towards web-based interfaces, facilitating remote project management and data handling. 
+Such interfaces support collaborative efforts, allowing users to easily share and review project stages.
+
+\paragraph{Comprehensive Error Handling and Visualization}
+
+Effective error feedback and clear, informative visualization tools are critical for user satisfaction. 
+Users express frustration with vague error messages and cumbersome command-line interactions for troubleshooting and adjustments.
+
+\paragraph{File Management and Project Structure}
+
+Efficient file and project management, with clear distinctions between different stages (preprocessing, training, rendering) and support for various input formats, is essential. 
+Users discuss challenges with current tools regarding data organization, suggesting improvements for handling input data and managing projects​​.
+
+% \paragraph{Quality, Performance, and Scalability}
+
+% Concerns about the scalability of projects, particularly when dealing with large datasets or aiming for high-quality outputs, are prevalent. 
+% Users desire improvements in performance management and quality assurance mechanisms.
+
+\paragraph{Integration and Export Options}
+
+Strong integration capabilities with popular 3D and VFX software and flexible export options are desired. 
+Users discuss the importance of being able to easily import NeRF-generated scenes into tools like Unreal Engine or Blender for further processing and use in production-quality projects​​.
+
+\paragraph{Multi-Mode Operation}
+
+The necessity for multi-mode operation in NeRF tool interfaces emerges as a significant insight, underlining the importance of accommodating a broad spectrum of users, from novices to experts. 
+A simplified mode is envisioned to cater to beginners, offering an intuitive and streamlined workflow, whereas an advanced mode is tailored for experienced users requiring detailed control over the NeRF creation process. 
+% By embracing a multi-mode approach, NeRF tools can democratize access to sophisticated 3D modeling capabilities, fostering a creative and inclusive environment for users of all backgrounds.
+
+\paragraph{Conclusion}
+
+These findings highlight the demand for a NeRF tool interface that is user-friendly, versatile, and capable of supporting a wide range of workflows and user expertise levels. 
+The ideal tool would combine intuitive project management and visualization features with powerful customization options, robust error handling and feedback mechanisms, and effective performance management capabilities.
+
 
 \section{User Study and Evaluation}
 \label{sec:methodology:study}
