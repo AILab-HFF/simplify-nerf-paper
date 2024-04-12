@@ -150,7 +150,24 @@ It was during this time that the wireframes evolved into a more detailed and use
 To evaluate the usability and overall utility of the developed NeRF interface prototype, a comprehensive user study was conducted. 
 The primary aim of this study was to collect feedback on the prototype's user experience, identify any usability challenges participants encountered, and understand their satisfaction levels with the interface. 
 Employing a mixed-methods approach allowed for a blend of quantitative and qualitative data collection and analysis, offering a multifaceted view of the prototype's performance in real-world tasks.
+
 Participants were given a set of tasks to complete within the prototype, followed by a User Experience Questionnaire (UEQ) and a follow-up interview to gather detailed feedback on their experiences.
+
+\subsection*{Participant Selection Criteria}
+\label{sec:methodology:study:criteria}
+
+Participants were selected in a similar fashion to the initial user research phase, with a focus on individuals working in the film industry and possessing varying levels of experience with NeRF technology, including none at all.
+
+% TODO: appropriate here or in results?
+\begin{figure}[htb]
+  \centering
+  \begin{tikzpicture}
+    \pie[sum=auto, text=legend, radius=2, rotate=90, color={blue!10, blue!20, blue!40, blue!60, blue!80, blue!100}]{4/No experience, 1/Little experience, 1/Beginner, 2/Advanced, 1/Experienced, 1/Expert }
+  \end{tikzpicture}
+  \caption{Participant Experience Levels}
+  \label{fig:study:experience}  
+\end{figure}
+
 
 \subsection*{Tasks Based Usability Test}
 \label{sec:methodology:study:tasks}
@@ -174,10 +191,12 @@ On average, participants took 30 minutes to complete the tasks.
 Participant were passively observed while working on their tasks, to identify any problems or operation errors they encountered and to determine their overall performance.
 In addition the screen was recorded to capture the participants interactions with the prototype, and to allow for a more detailed analysis of their behavior later on.
 
+% TODO: here or in related work?
 \subsection*{User Experience Questionnaire}
 \label{sec:methodology:study:ueq}
 
 After completing their tasks, users were asked to fill out the User Experience Questionnaire (UEQ) \cite{laugwitz_construction_2008}, a standardized questionnaire for the assessment of user experience.
+The placement of the UEQ after the tasks was chosen to capture the immediate impressions of the participants, while the experience was still fresh in their minds and without being influenced by the follow-up interview.
 It measure user experience in six dimensions:
 
 \begin{itemize}
