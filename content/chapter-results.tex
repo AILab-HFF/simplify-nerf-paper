@@ -76,9 +76,96 @@ While the results provide valuable insights, they should not be overvalued or co
 Caution should be exercised in generalizing these findings without further validation from a larger, more diverse sample.
 
 \section{Findings from Qualitative User Testing}
-\label{sec:result:testing}
-% TODO: Add findings from qualitative user testing
+\label{sec:result:qualitative}
 
+This section presents the findings from the user study conducted to evaluate the user interface of the application. The results are organized into categories reflecting overall impressions, learning curve and accessibility, identified issues, and recommendations for improvement, which now include feature requests.
+
+\subsection*{Overall Impressions}
+\label{sec:results:overall_impressions}
+
+% TODO: good idea to include quotes?
+\cleanchapterquote{Also es ist auf jeden Fall sehr schönes Tool, also angenehm zum Nutzen.}{Participant 2}{}
+
+Users generally find the interface user-friendly, effective, and aesthetically pleasing, enhancing the user experience across various functionalities. Specifically:
+
+\paragraph{User-Friendly} 
+Participants highlighted the intuitive layout and ease of navigation within the interface, appreciating how straightforward it was to perform tasks without prior training or extensive help. 
+The logical arrangement of elements and minimalistic design were frequently mentioned as factors that reduced cognitive load and facilitated quicker learning and adaptation.
+ 
+\paragraph{Effective} 
+The effectiveness of the interface was noted in terms of its responsiveness and reliability. 
+Users were satisfied with the speed at which the interface responded to commands and the consistency of its performance during tasks, which helped in building trust and reducing frustration during interactions.
+ 
+\paragraph{Aesthetically Pleasing} 
+Many users commented on the visual appeal of the interface, mentioning the modern and clean aesthetic that made the experience more engaging. 
+The use of colors, fonts, and spacing was well-received, contributing to a pleasing visual environment that users felt comfortable working within over extended periods.
+
+These aspects collectively contribute to a positive user experience, making the application not only a tool that meets functional needs but also a pleasure to use, thereby encouraging repeated and prolonged engagement.
+
+\subsection*{Learning Curve and Accessibility}
+\label{sec:results:learning_curve_accessibility}
+
+Accessibility and ease of use are the main concerns of the application, driven to reduce the technical knowledge required to enable a broader user base.
+This section elaborates on the specific feedback received regarding the short comings and successes of the application in this regard.
+
+\paragraph{Ease of Use}
+As mentioned above, the overall user-friendliness was well received by participants across the board.
+Feedback from users indicates that the layout and workflow of the application facilitate quick learning and ease of use.
+The progress indicator as shown in Figure~\ref{fig:design:training-section} was particularly appreciated, as it helped users understand the current state of the application and what steps were required to complete a task.
+
+\paragraph{Overwhelming Aspects}
+Despite the general ease of use, some users reported feeling overwhelmed by certain aspects of the interface, particularly the viewer. 
+This component, while powerful, presents a steep learning curve due to its complexity and the dense presentation of information and controls. 
+New users, unfamiliar with NeRF and in particular Nerfstudio, might find this part of the application challenging to navigate initially.
+
+\paragraph{Technical Complexity}
+Reducing the technical complexity inherent from NeRF applications is crucial in making the application more accessible to a broader audience.
+Based on the feedback received from users, that were previously unfamiliar with NeRF, the application requires users to have some level of prior knowledge.
+The guided experience and reduced amount of options to configure, was appreciated by certain participant.
+It enabled them to quickly get started with the application without feeling overwhelmed.
+Most users felt confident, that after a short learning phase, they would be able to use the application effectively.
+However the feedback indicates a need for an onboarding process or tutorials to help new users overcome initial hurdles and gain confidence in using advanced features.
+In contrast, advanced users appreciated the depth of control and customization available.
+The ability to fine-tune settings through the advanced options was seen as a valuable feature, allowing them to optimize the processes for their specific needs.
+
+\paragraph{Project Management}
+Novice users appreciated the similarities to existing project management of a already familiar tool from the film industry.
+For experienced users, the abstraction of tedious project management tasks, like file uploads and data organization, was well received.
+This allowed them to focus on the core tasks of training and rendering, without getting bogged down by administrative overhead.
+
+\paragraph{Technical Language}
+One particularly insightful point of concern, was the unfamiliar terminology used, as there exist differences between some terms in the context of NeRF and the film industry.
+This can lead to confusion and hinder the learning process, as users struggle to understand the meaning and implications of certain terms.
+Adjusting the language used in the application to specifically target the intended audience, can help bridge this gap and further reduce the learning curve.
+
+In summary, the application succeeds in providing new users with access to advanced NeRF tools, while also catering to the needs of experienced users by offering advanced options for customization.
+
+\subsection*{Issues Identified}
+\label{sec:results:issues_identified}
+
+\paragraph{Navigation and Progression Clarity}
+Users experienced confusion about navigating through tasks and understanding their progression within the application.
+
+\paragraph{Technical Terms and Interface Elements}
+There are calls to simplify technical jargon and make interface elements like buttons more intuitive.
+
+\paragraph{Viewer and Screen Layout}
+Feedback indicates a need for a more flexible UI that adjusts to different screen sizes and supports fullscreen modes.
+
+\subsection*{Recommendations for Improvement}
+\label{sec:results:recommendations}
+
+\paragraph{Enhance User Guidance}
+Implementing tooltips and more descriptive labels for technical terms to aid understanding and reduce the learning curve.
+
+\paragraph{Refine UI Design}
+Address issues of navigation confusion and improve the visibility of the upload process and task progression.
+
+\paragraph{Expand Feature Set}
+Consider adding features based on user requests, such as benchmarking tools and advanced settings, to enhance the overall functionality of the interface. This includes integrating back-to-top buttons for improved navigation efficiency, providing options to disable animations for users who prefer a static background, and adding advanced settings for more granular control.
+
+\paragraph{Viewer Enhancements}
+Incorporate enhancements to the viewer based on user feedback, including simplifying the viewer interface, adding measurement tools, supporting multiple viewers simultaneously, and enhancing camera path management for better user control.
 
 \section{Integration and Findings}
 \label{sec:result:findings}
