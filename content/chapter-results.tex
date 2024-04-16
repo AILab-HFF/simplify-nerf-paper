@@ -61,7 +61,7 @@ Of the six scales, three have a high agreement, two have a medium agreement and 
   \label{tab:ueq-summary}
 \end{table}
 
-\subsection*{Conclusion}
+\subsection*{Summary}
 
 The analysis of the UEQ results gives some insights regarding the application's user experience. 
 Higher scores in the \emph{Attractiveness} and \emph{Efficiency} scales, accompanied by high agreement among participants, indicate that these aspects of the application are both effective and appealing. 
@@ -83,27 +83,30 @@ This section presents the findings from the user study conducted to evaluate the
 \subsection*{Overall Impressions}
 \label{sec:results:overall_impressions}
 
-% TODO: good idea to include quotes?
-\cleanchapterquote{Also es ist auf jeden Fall sehr schönes Tool, also angenehm zum Nutzen.}{Participant 2}{}
+Users generally find the interface user-friendly, effective, and aesthetically pleasing, enhancing the user experience across various functionalities. 
 
-Users generally find the interface user-friendly, effective, and aesthetically pleasing, enhancing the user experience across various functionalities. Specifically:
+\cleanchapterquote{Also es ist auf jeden Fall sehr schönes Tool, also angenehm zum Nutzen.}{Participant 2}{}
 
 \paragraph{User-Friendly} 
 Participants highlighted the intuitive layout and ease of navigation within the interface, appreciating how straightforward it was to perform tasks without prior training or extensive help. 
-The logical arrangement of elements and minimalistic design were frequently mentioned as factors that reduced cognitive load and facilitated quicker learning and adaptation.
+\cite{P1, P2, P4, P5, P7, P8, P10}
+% The logical arrangement of elements and minimalistic design were frequently mentioned as factors that reduced cognitive load and facilitated quicker learning and adaptation.
  
 \paragraph{Effective} 
 The effectiveness of the interface was noted in terms of its responsiveness and reliability. 
 Users were satisfied with the speed at which the interface responded to commands and the consistency of its performance during tasks, which helped in building trust and reducing frustration during interactions.
+\cite{P2, P4, P7, P8, P10}
  
 \paragraph{Aesthetically Pleasing} 
 Many users commented on the visual appeal of the interface, mentioning the modern and clean aesthetic that made the experience more engaging. 
-The use of colors, fonts, and spacing was well-received, contributing to a pleasing visual environment that users felt comfortable working within over extended periods.
+\cite{P7, P8, P10}
 
 These aspects collectively contribute to a positive user experience, making the application not only a tool that meets functional needs but also a pleasure to use, thereby encouraging repeated and prolonged engagement.
 
 \subsection*{Learning Curve and Accessibility}
 \label{sec:results:learning_curve_accessibility}
+
+% \cleanchapterquote{Also es ist auf jeden Fall sehr schönes Tool, also angenehm zum Nutzen.}{Participant 2}{}
 
 Accessibility and ease of use are the main concerns of the application, driven to reduce the technical knowledge required to enable a broader user base.
 This section elaborates on the specific feedback received regarding the short comings and successes of the application in this regard.
@@ -111,12 +114,17 @@ This section elaborates on the specific feedback received regarding the short co
 \paragraph{Ease of Use}
 As mentioned above, the overall user-friendliness was well received by participants across the board.
 Feedback from users indicates that the layout and workflow of the application facilitate quick learning and ease of use.
+\cite{P4, P5, P7, P8, P10}
 The progress indicator as shown in Figure~\ref{fig:design:training-section} was particularly appreciated, as it helped users understand the current state of the application and what steps were required to complete a task.
+\cite{P5, P7, P8, P9}
 
 \paragraph{Overwhelming Aspects}
-Despite the general ease of use, some users reported feeling overwhelmed by certain aspects of the interface, particularly the viewer. 
-This component, while powerful, presents a steep learning curve due to its complexity and the dense presentation of information and controls. 
+Despite the general ease of use, some users expressed concerns about overwhelming aspects of the interface.
+The parameter settings often require a deep understanding of NeRF technology to understand there effects, but this did not hinder the overall usability of the application.
+\cite{P5, P7}
+The viewer component, while powerful, presents a steep learning curve due to its complexity and the dense presentation of information and controls. 
 New users, unfamiliar with NeRF and in particular Nerfstudio, might find this part of the application challenging to navigate initially.
+\cite{P2}
 
 \paragraph{Technical Complexity}
 Reducing the technical complexity inherent from NeRF applications is crucial in making the application more accessible to a broader audience.
@@ -124,17 +132,22 @@ Based on the feedback received from users, that were previously unfamiliar with 
 The guided experience and reduced amount of options to configure, was appreciated by certain participant.
 It enabled them to quickly get started with the application without feeling overwhelmed.
 Most users felt confident, that after a short learning phase, they would be able to use the application effectively.
+\cite{P2, P3, P4, P5, P6, P7, P8}
 However the feedback indicates a need for an onboarding process or tutorials to help new users overcome initial hurdles and gain confidence in using advanced features.
 In contrast, advanced users appreciated the depth of control and customization available.
+\cite{P9, P10}
 The ability to fine-tune settings through the advanced options was seen as a valuable feature, allowing them to optimize the processes for their specific needs.
 
 \paragraph{Project Management}
-Novice users appreciated the similarities to existing project management of a already familiar tool from the film industry.
+Novice users appreciated the similarities to existing project management of a already familiar tool from the film industry. 
+\cite{P5}
 For experienced users, the abstraction of tedious project management tasks, like file uploads and data organization, was well received.
+\cite{P1}
 This allowed them to focus on the core tasks of training and rendering, without getting bogged down by administrative overhead.
 
 \paragraph{Technical Language}
-One particularly insightful point of concern, was the unfamiliar terminology used, as there exist differences between some terms in the context of NeRF and the film industry.
+One particularly insightful point of concern, was the unfamiliar terminology used, as there exist differences between some terms in the context of NeRF and the film industry. 
+\cite{P5}
 This can lead to confusion and hinder the learning process, as users struggle to understand the meaning and implications of certain terms.
 Adjusting the language used in the application to specifically target the intended audience, can help bridge this gap and further reduce the learning curve.
 
@@ -142,6 +155,8 @@ In summary, the application succeeds in providing new users with access to advan
 
 \subsection*{Identified Issues}
 \label{sec:results:issues}
+
+% \cleanchapterquote{Also es ist auf jeden Fall sehr schönes Tool, also angenehm zum Nutzen.}{Participant 2}{}
 
 The following issues were identified during the user testing sessions, based on feedback from participants. 
 Most of these issues became apparent while participants were performing tasks, and then were further discussed during the post-task interviews.
@@ -151,30 +166,47 @@ Users experienced confusion about navigating through tasks and understanding the
 This was particularly evident when having to switch to a different project.
 The intended way to navigate to the dashboard was to click on the logo, which was not immediately clear to all users.
 Some users succeeded in finding the dashboard after some exploration, while others used browser navigation to return to the dashboard.
-
+\cite{P1, P4, P5, P6, P8, P10}
 Some participant also mentioned uncertainties about navigating between the different sections of a project.
 The progress indicator can be used to navigate between the different sections, but some users took some time to discover this feature.
+\cite{P9}
 
 \paragraph{Inconsistent Wording}
-An issue that almost all participants stumbled upon was the inconsistent wording used specifically on the button to start the training process.
+\label{sec:results:issues:inconsistent_wording}
+An issue that almost many participants stumbled upon was the inconsistent wording used specifically on the button to start the training process.
 In the version of the application used during the user study, the button was labeled \emph{"Start Processing"}, which was confusing to most users.
 % This issue highlights the importance of consistent and clear wording throughout the application. 
+\cite{P2, P3, P6, P7, P8}
 
 \paragraph{Project Creation}
 Similar to the wording issue, the process of creating a new project was not as intuitive as intended.
 Many participants encountered a small annoyance when they tried to click on the big plus icon placed in the center of the card, which was not clickable. \fref{fig:design:dashboard}
 Although everyone quickly discovered the intended way to create a new project, this issue was mentioned by almost all participants.
+\cite{P3, P4, P5, P6, P7, P8}
 
 \paragraph{File Upload}
 \label{sec:results:issues:file_upload}
-A few participant experienced issues with the file upload process.
+A few participant experienced issues with the file upload process. 
+\cite{P1, P4, P6}
 The system model is quite complex, as it involves multiple steps and the feedback provided was lacking in some cases.
 Before pre-processing can start, the user has to select the input data to use, upload it to the server, wait for the upload to complete before continuing.
 Users were not always aware of the progress, and would sometimes continue to the next step before the upload was complete. 
 
 \paragraph{Viewer and Screen Layout}
 Feedback indicates a need for a more flexible UI that adjusts to different screen sizes and supports fullscreen modes.
+\cite{P10}
 % TODO: add more details
+
+\paragraph{Awerness of Progress}
+In some cases, users were not aware in what stage of the creation process they were in.
+This was somewhat caused by the inconsistent wording (see \ref{sec:results:issues:file_upload}), but also by the high degree of similarity between the pre-processing and training steps.
+\cite{P2}
+
+\paragraph{Console Output}
+The console output was perceived differently by users. 
+Some users appreciated the detailed feedback and insights provided, even with no technical background. \cite{P5}
+Others that could not interpret the output, found it useless and distracting. \cite{P3, P4}
+
 
 \subsection*{Recommendations for Improvement}
 \label{sec:results:recommendations}
@@ -184,15 +216,19 @@ In contrast to the identified issues, these recommendations are more general and
 
 \paragraph{Enhance Interface Usability}
 To address the need for a more personalized and less distracting user interface, the animated background should be able to be disabled.
-Additionally, implementing a 'back-to-top' button would streamline navigation, enabling users to quickly return to the top of the page without manual scrolling.
+Additionally, implementing a 'back-to-top' button would streamline navigation, enabling users to quickly return to the top of the page without manual scrolling. 
+\cite{P10}
 
 \paragraph{Viewer Customization and Usability Enhancements}
 Several enhancements to the viewer are recommended to improve its functionality and usability:
 
 \begin{itemize}
-  \item \textbf{Multiple Viewing Modes}: Incorporate the ability to view the cameras perspective, as well as the scene from different angles, providing users with a more comprehensive understanding of the scene.
-  \item \textbf{Advanced Camera Controls}: Introduce adjustable controls for camera speed, motion blur, and the ability to set up speed ramps, to provide users with greater creative control.
-  \item \textbf{Measurement Tools}: Add tools that enable users to take precise measurements within the viewer, useful for detailed scene planning and analysis.
+  \item \textbf{Multiple Viewing Modes}: Incorporate the ability to view the cameras perspective, as well as the scene from different angles, providing users with a more comprehensive understanding of the scene. 
+  \cite{P5}
+  \item \textbf{Advanced Camera Controls}: Introduce adjustable controls for camera speed, motion blur, and the ability to set up speed ramps, to provide users with greater creative control. 
+  \cite{P5}
+  \item \textbf{Measurement Tools}: Add tools that enable users to take precise measurements within the viewer, useful for detailed scene planning and analysis. 
+  \cite{P7}
 \end{itemize}
 
 The participants requesting these features were exclusively users with a background in film production, who would include these features in their workflow.
@@ -201,17 +237,41 @@ The participants requesting these features were exclusively users with a backgro
 User with an academic background in NeRF requested the following features, when evaluating the application for their workflow:
 
 \begin{itemize}
-  \item \textbf{Support for different NeRF implementations}: Allow users to select different NeRF implementations, providing flexibility and customization options based on their requirements.
+  \item \textbf{Support for different NeRF implementations}: Allow users to select different NeRF implementations, providing flexibility and customization options based on their requirements. 
+  \cite{P1}
   \item \textbf{Advanced-Advanced Settings}: Provide deeper customization options for experienced users who require fine control over parameters, possibly allowing them to inject custom settings or scripts.
+  \cite{P9}
   \item \textbf{Integration of Benchmarking Tools}: Integrate tools like TensorBoard or WandDB to allow users to perform benchmarks, providing insights into model performance.
+  \cite{P10}
 \end{itemize}
-
 
 
 \paragraph{Camera and Shot Management}
 Develop a more structured approach to camera and shot management within the application to support complex productions.
 Allow users to label and organize different camera shots and paths, making it easier to manage multiple views or scenes within a single project.
+\cite{P5}
 
+\paragraph{Tighter Integration of Viewer}
+One participant suggested a tighter integration of the viewer with the rest of the application.
+Building the viewer controls directly into the interface, instead of inserting the viewer as a separate component, to provide a more seamless experience.
+\cite{P9}
+
+\subsection*{General Feedback}
+
+\paragraph{Lack of Modification Options}
+Creatives would like to see more options for modifying the scene, such as adding objects or changing the lighting.
+% TODO: add more details
+\cite{P3}
+
+\paragraph{Use Cases}
+Some participants saw no potential use cases for the application or NeRF in general in their current workflow. 
+\cite{P3}
+Others cited the limitation to static scenes as a major drawback, as they require dynamic scenes for their projects. 
+\cite{P4, P5}
+But the possibility for stylized and 'impossible' camera movements was inspiring application in advertisement and music videos. 
+\cite{P4}
+Pre-visualization was also mentioned as a potential use case, as it allows for quick and easy scene creation that can be used for planning and storyboarding. 
+\cite{P4}
 
 
 \section{Integration and Findings}
