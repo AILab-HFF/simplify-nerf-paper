@@ -140,13 +140,13 @@ Adjusting the language used in the application to specifically target the intend
 
 In summary, the application succeeds in providing new users with access to advanced NeRF tools, while also catering to the needs of experienced users by offering advanced options for customization.
 
-\subsection*{Issues Identified}
-\label{sec:results:issues_identified}
+\subsection*{Identified Issues}
+\label{sec:results:issues}
 
 The following issues were identified during the user testing sessions, based on feedback from participants. 
 Most of these issues became apparent while participants were performing tasks, and then were further discussed during the post-task interviews.
 
-\paragraph{Navigation}
+\paragraph{Unclear Navigation}
 Users experienced confusion about navigating through tasks and understanding their progression within the application.
 This was particularly evident when having to switch to a different project.
 The intended way to navigate to the dashboard was to click on the logo, which was not immediately clear to all users.
@@ -155,7 +155,7 @@ Some users succeeded in finding the dashboard after some exploration, while othe
 Some participant also mentioned uncertainties about navigating between the different sections of a project.
 The progress indicator can be used to navigate between the different sections, but some users took some time to discover this feature.
 
-\paragraph{Wording}
+\paragraph{Inconsistent Wording}
 An issue that almost all participants stumbled upon was the inconsistent wording used specifically on the button to start the training process.
 In the version of the application used during the user study, the button was labeled \emph{"Start Processing"}, which was confusing to most users.
 % This issue highlights the importance of consistent and clear wording throughout the application. 
@@ -174,21 +174,45 @@ Users were not always aware of the progress, and would sometimes continue to the
 
 \paragraph{Viewer and Screen Layout}
 Feedback indicates a need for a more flexible UI that adjusts to different screen sizes and supports fullscreen modes.
+% TODO: add more details
 
 \subsection*{Recommendations for Improvement}
 \label{sec:results:recommendations}
 
-\paragraph{Enhance User Guidance}
-Implementing tooltips and more descriptive labels for technical terms to aid understanding and reduce the learning curve.
+This section outlines some of the recommendations for improving the application based on the feedback received from participants. 
+In contrast to the identified issues, these recommendations are more general and focus on improving the overall user experience.
 
-\paragraph{Refine UI Design}
-Address issues of navigation confusion and improve the visibility of the upload process and task progression.
+\paragraph{Enhance Interface Usability}
+To address the need for a more personalized and less distracting user interface, the animated background should be able to be disabled.
+Additionally, implementing a 'back-to-top' button would streamline navigation, enabling users to quickly return to the top of the page without manual scrolling.
 
-\paragraph{Expand Feature Set}
-Consider adding features based on user requests, such as benchmarking tools and advanced settings, to enhance the overall functionality of the interface. This includes integrating back-to-top buttons for improved navigation efficiency, providing options to disable animations for users who prefer a static background, and adding advanced settings for more granular control.
+\paragraph{Viewer Customization and Usability Enhancements}
+Several enhancements to the viewer are recommended to improve its functionality and usability:
 
-\paragraph{Viewer Enhancements}
-Incorporate enhancements to the viewer based on user feedback, including simplifying the viewer interface, adding measurement tools, supporting multiple viewers simultaneously, and enhancing camera path management for better user control.
+\begin{itemize}
+  \item \textbf{Multiple Viewing Modes}: Incorporate the ability to view the cameras perspective, as well as the scene from different angles, providing users with a more comprehensive understanding of the scene.
+  \item \textbf{Advanced Camera Controls}: Introduce adjustable controls for camera speed, motion blur, and the ability to set up speed ramps, to provide users with greater creative control.
+  \item \textbf{Measurement Tools}: Add tools that enable users to take precise measurements within the viewer, useful for detailed scene planning and analysis.
+\end{itemize}
+
+The participants requesting these features were exclusively users with a background in film production, who would include these features in their workflow.
+
+\paragraph{Expand Advanced Settings and Benchmarks}
+User with an academic background in NeRF requested the following features, when evaluating the application for their workflow:
+
+\begin{itemize}
+  \item \textbf{Support for different NeRF implementations}: Allow users to select different NeRF implementations, providing flexibility and customization options based on their requirements.
+  \item \textbf{Advanced-Advanced Settings}: Provide deeper customization options for experienced users who require fine control over parameters, possibly allowing them to inject custom settings or scripts.
+  \item \textbf{Integration of Benchmarking Tools}: Integrate tools like TensorBoard or WandDB to allow users to perform benchmarks, providing insights into model performance.
+\end{itemize}
+
+
+
+\paragraph{Camera and Shot Management}
+Develop a more structured approach to camera and shot management within the application to support complex productions.
+Allow users to label and organize different camera shots and paths, making it easier to manage multiple views or scenes within a single project.
+
+
 
 \section{Integration and Findings}
 \label{sec:result:findings}
