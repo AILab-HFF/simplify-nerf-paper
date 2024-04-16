@@ -1,0 +1,104 @@
+% !TEX root = ../main.tex
+%
+\chapter{User Study and Evaluation}
+\label{sec:study}
+
+To evaluate the usability and overall utility of the developed NeRF interface prototype, a comprehensive user study was conducted. 
+The primary aim of this study was to collect feedback on the prototype's user experience, identify any usability challenges participants encountered, and understand their satisfaction levels with the interface. 
+Employing a mixed-methods approach allowed for a blend of quantitative and qualitative data collection and analysis, offering a multifaceted view of the prototype's performance in real-world tasks.
+
+Participants were given a set of tasks to complete within the prototype, followed by a User Experience Questionnaire (UEQ) and a follow-up interview to gather detailed feedback on their experiences.
+
+\section{Participant Selection Criteria}
+\label{sec:study:criteria}
+
+Participants were selected in a similar fashion to the initial user research phase, with a focus on individuals working in the film industry and possessing varying levels of experience with NeRF technology, including none at all.
+
+% TODO: appropriate here or in results?
+\begin{figure}[htb]
+  \centering
+  \begin{tikzpicture}
+    \pie[sum=auto, text=legend, radius=2, rotate=90, color={blue!10, blue!20, blue!40, blue!60, blue!80, blue!100}]{4/No experience, 1/Little experience, 1/Beginner, 2/Advanced, 1/Experienced, 1/Expert }
+  \end{tikzpicture}
+  \caption{Participant Experience Levels}
+  \label{fig:study:experience}  
+\end{figure}
+
+\section{Tasks Based Usability Test}
+\label{sec:study:tasks}
+
+The usability test was conducted in a controlled environment, with participants being asked to complete a two tasks with the prototype.
+The tasks were designed to cover a range of functionalities and features of the prototype, and represent a typical workflow when creating NeRF models.
+
+\begin{enumerate}
+  \item Task: Create a new project.
+  \item Task: Upload a prepared video file.
+  \item Task: Pre-process the uploaded file to prepare it for training.
+  \item Task: Switch to an existing project that already pre-processed data.
+  \item Task: Start a NeRF training.
+  \item Task: Create a camera path in the viewer.
+  \item Task: Export a video.
+\end{enumerate}
+
+To keep an appropriate time frame, none of the tasks required completion of a training process, and pre-processed data and pre-trained models were provided to the participants.
+On average, participants took 30 minutes to complete the tasks.
+
+Participant were passively observed while working on their tasks, to identify any problems or operation errors they encountered and to determine their overall performance.
+In addition the screen was recorded to capture the participants interactions with the prototype, and to allow for a more detailed analysis of their behavior later on.
+
+\section{User Experience Questionnaire}
+\label{sec:study:ueq}
+
+After completing their tasks, users were asked to fill out the User Experience Questionnaire (UEQ) \cite{laugwitz_construction_2008}, a standardized questionnaire for the assessment of user experience.
+The placement of the UEQ after the tasks was chosen to capture the immediate impressions of the participants, while the experience was still fresh in their minds and without being influenced by the follow-up interview.
+It measure user experience in six dimensions:
+
+\begin{itemize}
+  \item \textbf{Attractiveness} - the overall impression of the product
+  \item \textbf{Perspicuity} - the clarity and understandability of the product
+  \item \textbf{Efficiency} - the perceived effort required to use the product
+  \item \textbf{Dependability} - the perceived reliability and trustworthiness of the product
+  \item \textbf{Novelty} - the perceived originality and innovation of the product
+  \item \textbf{Stimulation} - the perceived level of excitement and engagement with the product
+\end{itemize}
+
+This covers both classical usability goals (Efficiency, Perspicuity, Dependability) and user experience qualities (Novelty, Stimulation).
+Attractiveness is purely a valence dimension, and is not directly related to usability or user experience.
+
+In total the questionnaire consists of 26 items, each represented by two terms of opposite meaning. 
+The order of the terms is randomized for each item, to avoid bias.
+Participants are asked to rate each item on a 7-point scale, from -3 to +3, with 0 representing a neutral response.
+An example of the scale can be seen below:
+
+\begin{center}
+  boring \quad o o o o o o o \quad exciting
+\end{center}
+
+The format of the questionnaire gives participants a clear and simple way to  quickly express their feelings and thoughts about the prototype, without much effort.
+
+In this study the questionnaire was filled out by participants in digital form, using a web-based survey tool. %TODO: source
+The survey included additional questions to gather demographic information and to capture prior experience with NeRF and other 3D modeling tools.
+This allowed for a more efficient data collection and analysis, across in-person and remote participants.
+
+\section{Follow-up Interview}
+\label{sec:study:interview}
+
+After completing the usability test, participants were engaged in a short follow-up interview, to gather more detailed feedback on their experience with the prototype. 
+Similar to the initial user interviews, these interviews were semi-structured, following a pre-defined set of question, with room for participants to share their own thoughts and suggestions.
+The questions can be categorized into general usability, tasks specific feedback and suggestions for improvement.
+The interview template can be found in the appendix \ref{sec:appendix:questionnaire}.
+
+
+\section{Data Analysis}
+\label{sec:study:analysis}
+
+Both the recordings of the usability test and the follow-up interviews were analyzed to identify common themes and patterns in the feedback of participants.
+The video recordings were coded to highlight any usability issues or challenges that participants encountered during the tasks.
+The audio recordings of the interviews were transcribed and coded.
+The data was then categorized and analyzed to identify common themes and patterns across the participants.
+
+Analysis of the UEQ data was done using the standard procedure for the questionnaire.
+The UEQ provides a data analysis tool in form of spreadsheet, that calculates all necessary values and visualizes the results.
+
+In summary, this user study and evaluation was pivotal in validating the effectiveness of the NeRF interface prototype, uncovering valuable insights into its usability, and identifying opportunities for further refinement. 
+The mixed-methods approach ensured a balanced assessment, capturing both the tangible aspects of interface interaction and the subjective experiences of the users, providing a solid foundation for the next stages of development.

@@ -44,19 +44,13 @@
 \pagenumbering{roman}			% roman page numbing (invisible for empty page style)
 \pagestyle{empty}				% no header or footers
 \input{content/titlepages}		% INCLUDE: all titlepages
-\cleardoublepage
 
 \pagestyle{plain}				% display just page numbers
 \input{content/abstract}		% INCLUDE: the abstracts (english and german)
-\cleardoublepage
-%
-\input{content/acknowledgement} % INCLUDE: acknowledgement
-\cleardoublepage
 %
 \currentpdfbookmark{\contentsname}{toc}
 \setcounter{tocdepth}{2}		% define depth of toc
 \tableofcontents				% display table of contents
-\cleardoublepage
 
 % --------------------------
 % Body matter
@@ -66,10 +60,13 @@
 \pagestyle{scrheadings} 	% fancy header and footer
 
 \input{content/chapter-introduction}   % INCLUDE: introduction
+\input{content/chapter-background.tex}
 \input{content/chapter-related-work}   % INCLUDE: related work
 \input{content/chapter-methodology}       % INCLUDE: concepts
+\input{content/chapter-user-research.tex}
 \input{content/chapter-design.tex}
 \input{content/chapter-system}         % INCLUDE: system
+\input{content/chapter-user-study.tex}
 \input{content/chapter-results}         % INCLUDE: system
 \input{content/chapter-discussion.tex}
 \input{content/chapter-conclusion}     % INCLUDE: conclusion
