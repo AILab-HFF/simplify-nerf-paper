@@ -50,19 +50,39 @@ By training on large datasets of posed imagery, these networks learn complex map
 
 \section{Neural Radiance Fields for View Synthesis}
 
-Neural Radiance Fields (NeRF) offer a novel approach to view synthesis that significantly advances previous techniques. Utilizing a fully connected deep neural network, NeRF optimizes a continuous volumetric scene function from a sparse set of input views \cite{mildenhall_nerf_2021}. This method diverges from traditional discrete representations like voxel grids or mesh geometries, employing a more fluid and detailed scene representation.
+Neural Radiance Fields (NeRF) offer a novel approach to view synthesis that significantly advances previous techniques.
+Utilizing a fully connected deep neural network, NeRF optimizes a continuous volumetric scene function from a sparse set of input views \cite{mildenhall_nerf_2021}.
+This method diverges from traditional discrete representations like voxel grids or mesh geometries, employing a more fluid and detailed scene representation.
 
 \paragraph{Implementation}
-NeRF synthesizes views by querying 5D coordinate space—comprising spatial locations \((x, y, z)\) and viewing directions \((\theta, \phi)\) along camera rays (a). Classic volume rendering techniques are then applied to convert the output densities and colors into images. At the heart of this process is a Multilayer Perceptron (MLP), a type of neural network characterized by layers of interconnected nodes which process input data sequentially from input to output. The MLP in NeRF takes sampled 3D points and corresponding viewing directions as input and outputs the color and volume density (b). This output is then composited into a 2D image using volume rendering techniques (c). Because this rendering function is differentiable, NeRF uses gradient descent to minimize the difference between synthesized images and observed ground truth, optimizing the neural representation of the scene (d). \fref{fig:nerf-overview}
+NeRF synthesizes views by querying 5D coordinate space—comprising spatial locations \((x, y, z)\) and viewing directions \((\theta, \phi)\) along camera rays (a).
+Classic volume rendering techniques are then applied to convert the output densities and colors into images.
+At the heart of this process is a Multilayer Perceptron (MLP), a type of neural network characterized by layers of interconnected nodes which process input data sequentially from input to output.
+The MLP in NeRF takes sampled 3D points and corresponding viewing directions as input and outputs the color and volume density (b).
+This output is then composited into a 2D image using volume rendering techniques (c).
+Because this rendering function is differentiable, NeRF uses gradient descent to minimize the difference between synthesized images and observed ground truth, optimizing the neural representation of the scene (d).
+\fref{fig:nerf-overview}
 
 \begin{figure}[h!]
   \centering
   \includegraphics[width=\textwidth]{figures/bg-nerf.png}
-  \caption{Overview of the NeRF scene representation and rendering procedure, illustrating the stages of sampling, neural processing, and image composition.}
+  \caption{Overview of the NeRF scene representation and rendering procedure, illustrating the stages of sampling, neural processing, and image composition (from \cite{mildenhall_nerf_2021}).}
   \label{fig:nerf-overview}
 \end{figure}
 
 \paragraph{Advantages of NeRF}
-Compared to the methodologies discussed above, NeRF presents several advantages. It surpasses the capabilities of mesh and voxel-based methods in rendering high-resolution details and handling intricate geometries and material properties. The continuous volumetric representation is not only capable of producing more photorealistic images but also remains highly efficient in memory usage. This efficiency facilitates handling complex real-world scenes without the prohibitive storage and computation costs associated with traditional 3D representations.
+Compared to the methodologies discussed above, NeRF presents several advantages.
+It surpasses the capabilities of mesh and voxel-based methods in rendering high-resolution details and handling intricate geometries and material properties.
+The continuous volumetric representation is not only capable of producing more photorealistic images but also remains highly efficient in memory usage.
+This efficiency facilitates handling complex real-world scenes without the prohibitive storage and computation costs associated with traditional 3D representations.
+
+\paragraph{Extensions and Applications of NeRF}
+The landscape of NeRF has been enriched by several innovative extensions that broaden the utility and interactivity of NeRF models. 
+NeRF frameworks with user interfaces have emerged, enabling users to explore and manipulate 3D scenes \cite{muller_instant_2022,tancik_nerfstudio_2023}. 
+These frameworks offer features such as real-time scene rendering, adjustable training parameters, and the creation of camera trajectories for video rendering.
+Recent advancements have introduced text-based manipulation, allowing users to edit and transform scenes through natural language descriptions \cite{bao_sine_2023,bar-tal_text2live_2022,haque_instruct-nerf2nerf_2023,wang_clip-nerf_2022}. 
+Another area of development is in color and appearance editing, where new methods enable adjustments of scene colors, consistent across varying views \cite{wu_palettenerf_2022}. 
+Additionally, some tools have integrated mesh editing capabilities, enhancing the geometric manipulation within NeRF-generated scenes \cite{yuan_nerf-editing_2022}. 
+These enhancements not only extend the functional range of NeRF but also significantly improve their application in creative industries.
 
 In conclusion, NeRF's innovative use of neural networks for scene representation sets a new standard for photorealistic view synthesis, delivering high-quality results that are both computationally efficient and visually impressive.
