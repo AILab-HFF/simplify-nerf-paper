@@ -44,5 +44,28 @@ The user experience still requires technical knowledge, underscoring the need fo
 \section{Luma AI}
 \label{sec:related:lmua}
 
-\section{Photogrammetry}
-\label{sec:related:photogrammetry}
+Luma AI \cite{ai_luma_nodate} is making Neural Radiance Fields accessible to non-technical users in a commercial space.
+This platform leverages augmented reality (AR) to guide users through the capture process, greatly simplifying the creation of NeRFs from everyday smartphones.
+
+\paragraph{Guided Capture Process}
+Luma AI utilizes AR to assist users in capturing images from optimal angles and distances, ensuring that the collected data is suitable for NeRF generation.
+This guided process reduces the complexities involved in capturing the necessary footage for effective NeRF modeling.
+
+\paragraph{Cloud-Based NeRF Generation}
+Once the footage is captured, it is automatically processed in Luma AI’s cloud-based system to generate a NeRF, requiring no user input for configuration.
+This automation not only simplifies the user experience but also makes powerful 3D reconstruction technology readily accessible to a broad audience.
+
+\paragraph{Viewing and Editing}
+Created scenes can be viewed directly within the app or through a web browser. 
+While the editing capabilities are limited, users can make basic adjustments, reshoot parts of the scene, and interact with the generated NeRF in an intuitive manner.
+The features here are similar to what is offered in Nerfstudio's viewer \fref{fig:nerfstudio-viewer}, but with a more modern user-interface.
+
+\paragraph{Export Capabilities}
+Luma AI offers various export formats for the generated scenes, allowing users to utilize these outputs in different applications or platforms, further enhancing the utility of the captured NeRFs.
+They also provide a social platform for sharing and viewing NeRFs, fostering a community around the technology.
+
+\paragraph{Limitations}
+Despite its innovative approach, Luma AI's main limitation lies in the lack of user control over the NeRF training process. 
+The automated system, while user-friendly, does not allow for adjustments in the training parameters or the refinement of the final model. 
+This lack of control can result in less than optimal NeRF outputs for users who may require more precise or customized 3D representations.
+
