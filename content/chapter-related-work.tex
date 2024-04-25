@@ -12,7 +12,7 @@ Its design focuses on modularity, ease of use, and integration capabilities, whi
 \paragraph{Modularity}
 Nerfstudio is built on a modular framework that allows users to easily customize and extend their NeRF implementations.
 This modularity supports various input data formats, making it versatile for different real-world scenarios.
-A wide range of existing methods are already well integrated into Nerfstudio, including Instant-GPT \cite{muller_instant_2022}, their own Nerfacto \cite{noauthor_nerfacto_nodate} method that combines various existing techniques, and several of the above mentioned extensions \cite{haque_instruct-nerf2nerf_2023,jan-niklas_dihlmann_signerf_2024}.
+A wide range of existing methods are already well integrated into Nerfstudio, including Instant-GPT \cite{muller_instant_2022}, their own Nerfacto \cite{noauthor_nerfacto_nodate} method that combines various existing techniques, and several of the previously mentioned extensions \cite{haque_instruct-nerf2nerf_2023,jan-niklas_dihlmann_signerf_2024}.
 
 \paragraph{Real-Time Web Viewer}
 One of the standout features of Nerfstudio is its real-time web viewer, which enables visualization of NeRF training and outputs directly through a web browser.
@@ -26,7 +26,7 @@ This eliminates the need for high-end local GPU setups, broadening the tool's ac
 \end{figure}
 
 \paragraph{Flexibility of Data Handling}
-Nerfstudio simplifies the process of importing and exporting data, supporting a wide range of formats to support a variety of use-cases.
+Nerfstudio simplifies the process of importing and exporting data, supporting a wide range of formats to accommodate various use cases.
 Users can easily import images and videos, including data from mobile capture apps such as Polycam \cite{noauthor_polycam_nodate} and Record3D \cite{noauthor_record3d_nodate}.
 Additionally, the framework supports exporting results in various formats such as videos, point clouds, and meshes.
 This flexibility allows users to integrate NeRF outputs into diverse creative and technical applications.
@@ -35,14 +35,14 @@ This flexibility allows users to integrate NeRF outputs into diverse creative an
 Being open-source, Nerfstudio encourages community-driven development and continuous improvement, facilitating updates that keep pace with the latest research and technological advances.
 This openness also allows users to adapt the tool to their specific needs.
 
-\paragraph{Limitiations}
+\paragraph{Limitations}
 
 Despite advancements, Nerfstudio's technical complexity and reliance on command-line interfaces for key operations like model training and data preprocessing remain significant barriers.
 These aspects limit its accessibility to those with specific technical skills and deter broader creative uses.
 The user experience still requires technical knowledge, underscoring the need for more intuitive interfaces that simplify interaction and expand its user base beyond technical specialists.
 
 \section{Luma AI}
-\label{sec:related:lmua}
+\label{sec:related:luma}
 
 Luma AI \cite{ai_luma_nodate} is making Neural Radiance Fields accessible to non-technical users in a commercial space.
 This platform leverages augmented reality (AR) to guide users through the capture process, greatly simplifying the creation of NeRFs from everyday smartphones.
@@ -58,7 +58,7 @@ This automation not only simplifies the user experience but also makes powerful 
 \paragraph{Viewing and Editing}
 Created scenes can be viewed directly within the app or through a web browser \fref{fig:luma-viewer}. 
 While the editing capabilities are limited, users can make basic adjustments, reshoot parts of the scene, and interact with the generated NeRF in an intuitive manner.
-The features here are similar to what is offered in Nerfstudio's viewer \fref{fig:nerfstudio-viewer}, but with a more modern user-interface.
+The features here are similar to those offered in Nerfstudio's viewer \fref{fig:nerfstudio-viewer}, but with a more modern user-interface.
 
 \begin{figure}[h!]
   \centering
@@ -75,4 +75,3 @@ They also provide a social platform for sharing and viewing NeRFs, fostering a c
 Despite its innovative approach, Luma AI's main limitation lies in the lack of user control over the NeRF training process. 
 The automated system, while user-friendly, does not allow for adjustments in the training parameters or the refinement of the final model. 
 This lack of control can result in less than optimal NeRF outputs for users who may require more precise or customized 3D representations.
-
