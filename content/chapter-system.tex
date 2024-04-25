@@ -16,7 +16,7 @@ Requests from the client are sent to the server using HTTP requests, and, in the
 	\label{fig:system:example2}
 \end{figure}
 
-For the prototype, all components were composed into a single Docker container and deployed as a single unit.
+For the prototype, all components were composed into a single Docker \cite{noauthor_docker_2022} container and deployed as a single unit.
 This approach leveraged the pre-configured container provided by nerfstudio and allowed for a quick and easy deployment of the prototype.
 
 \section{Frontend Development} 
@@ -60,16 +60,13 @@ This included some simple styling changes to make the viewer fit better into the
 More complex changes were also made to improve the user experience.
 The viewer contained several interactions where it was necessary for the user to copy console commands, to be used in the CLI.
 These interactions were replaced with buttons that send a request to the server to execute the command instead.
+These modifications were done at build-time of the container by applying a patch to the nerfstudio source code of the base image.
 
 The main shortcoming of this approach is that the frontend is unaware of the state of the viewer, and cannot update the UI based on actions triggered in the viewer.
 It has to rely on polling the server to get the current state of rendering processes to give feedback to the user.
 
-These modifications were done at build-time of the container by applying a patch to the nerfstudio source code of the base image.
-
 \section{Backend Development}
 \label{sec:system:backend}
-
-% Advantages of tRPC, configuration, and API design
 
 The backend was built using tRPC \cite{noauthor_trpc_nodate}, a framework for building type-safe APIs in TypeScript.
 This type-safety was useful in building the API, as nerfstudio endpoints require a specific set of parameters of various types, that could be easily defined using TypeScript and reused in the frontend.
@@ -78,10 +75,6 @@ A major concern for the backend was the handling of asynchronous operations.
 Processes can often take several minutes to complete, and the user should be able to see the progress of these operations.
 tRPC implements a feature called subscriptions, which allows the client to subscribe to a certain event and receive updates when that event occurs.
 This is used for any long-running operations, such as pre-processing or training a NeRF model.
-
-Some additional endpoints were implemented using Express.
-This includes the file upload endpoint, which is used to upload images and videos to the server.
-As well as the render endpoint, called through the viewer, as there does not exist a tRPC client for Python.
 
 \begin{lstlisting}[style=ES6, caption=Example tRPC endpoint for Pre-Processing]
 export const nerfstudioRouter = router({
@@ -107,6 +100,10 @@ export const nerfstudioRouter = router({
 });
 \end{lstlisting}
 
+Some additional endpoints were implemented using Express \cite{noauthor_express_nodate}.
+This includes the file upload endpoint, which is used to upload images and videos to the server.
+As well as the render endpoint, called through the viewer, as there does not exist a tRPC client for Python.
+
 All project related data is stored in a workspace directory, which is mounted as a volume in the docker container.
 This allows for the data to persist between container restarts, and for the user to access the data outside of the container.
 
@@ -116,7 +113,6 @@ This allows for the data to persist between container restarts, and for the user
 \subsection*{Limitations of tRPC}
 
 Although tRPC is a powerful tool for building APIs, with tight integration into the frontend, it is not without its limitations.
-
 It lacks support for \texttt{multipart/form-data} file uploads, which are necessary for uploading images and videos.
 This was solved by implementing a separate endpoint using Express, which is used to upload files to the server.
 
@@ -126,7 +122,6 @@ A better solution could use a standard WebSocket connection, with the events con
 
 As mentioned above, tRPC does not have a client for Python, which is necessary for the viewer.
 This required the implementation of another separate endpoint using Express, which is called by the viewer to render the NeRF model.
-
 All these limitations could be solved by using a more general-purpose framework, such as Express.
 
 \subsection*{Working with the nerfstudio CLI}
@@ -139,7 +134,6 @@ The CLI is built using tyro \cite{yi_brentyityro_2024}, a tool for building comm
 Efforts were made to translate the configuration objects into TypeScript objects, that could be used throughout the project.
 This would allow for a more seamless integration of the CLI.
 Sadly, this was not possible, as the configuration objects are not easily serializable, and would require a lot of additional work to implement.
-
 Thus the implemented solution has to rely on manually constructing the commands based on documentation, which is error-prone and not very maintainable.
 
 \section{Future Directions}
@@ -149,8 +143,7 @@ Thus the implemented solution has to rely on manually constructing the commands 
 
 As outlined above, the approach of wrapping the nerfstudio CLI with a custom API has some limitations.
 A more integrated and robust solution would be built within the nerfstudio codebase itself.
-
-A possible solution might be able to reuse the existing configuration object, used for CLI, to build a REST API.
+It might be able to reuse the existing configuration object, used for CLI, to build a REST API.
 This would allow for a more seamless integration of the CLI into the frontend, and would allow for more flexibility in the future.
 It would also reduce the overall complexity of the system, as it would not require a separate server to handle requests.
 
