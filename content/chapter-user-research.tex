@@ -6,15 +6,15 @@
 \section{Participant Selection Criteria}
 \label{sec:user-research:criteria}
 
-Participants were carefully chosen based on their prior experience with NeRF technology and their connection to the film industry, culminating in a group of four experts. 
-This selection ensured a rich diversity of perspectives, encompassing a broad spectrum of technical proficiency and practical applications of NeRF. 
+Participants were carefully chosen based on their prior experience with NeRF technology and their connection to the film industry, resulting in a group of four experts. 
+This selection ensured a diversity of perspectives, encompassing a broad spectrum of technical proficiency and practical applications of NeRF. 
 By including individuals who have utilized NeRF in various capacities, the study aimed to uncover both the shared challenges faced by all users and the unique requirements of distinct user groups within the film industry.
 
 \section{Interview Methodology}
 \label{sec:user-research:interview}
 
-The interviews were designed as semi-structured conversations, following a core set of predetermined questions (see Appendix \ref{sec:appendix:interview-questions}) while also allowing for spontaneous discussions and additional queries. 
-Conducted one-on-one, these interviews facilitated a personalized dialogue with each participant, offering insights into individual experiences and perspectives. 
+The interviews were designed as semi-structured conversations, following a core set of prepared questions (see Appendix \ref{sec:appendix:interview-questions}) while also allowing for spontaneous discussions and additional queries. 
+Conducted one-on-one (3 online, 1 in person), these interviews facilitated a personalized dialogue with each participant, offering insights into individual experiences and perspectives. 
 Although the interviews were prepared in English, all conversation were held in German, to ensure comfort and clarity for participants, potentially leading to more candid and informative discussions.
 
 The structured flow of questions began with learning about the participants' backgrounds and experiences with NeRF technology, gradually moving towards more detailed questions about their specific needs, challenges, and desired improvements in NeRF interfaces. 
@@ -27,22 +27,31 @@ The insights gained from this initial research phase were instrumental in shapin
 \section{Key Findings}
 \label{sec:user-research:findings}
 
+
 \paragraph{NeRF in the Film Industry}
 NeRF technology is being explored for various applications in the film industry, such as visual effects, virtual production, and pre-production location scouting. 
 Despite its potential to simplify the creation of 3D scenes, current limitations in model quality, lack of editable models, and insufficient detail hinder its professional use. 
 However, its capability for quick 3D scene captures offers significant benefits for pre-visualization and planning in the pre-production phase, although concerns about model scale accuracy for export remain. 
 \cite{P2, P4}
 
+\cleanchapterquote{Also in der Planungsphase kam [NeRF] glaube ich ziemlich gut an, Setbegehung, Planung vorne vom eigentlichen Dreh, aber die Qualität war halt noch nicht so überzeugend.}{Participant 4}{}
+
 \paragraph{Optimizing Parameters and Workflow}
 Creating NeRFs typically involves preprocessing input data, training models, and exporting outputs. 
 Technical users emphasize the importance of parameter optimization in improving NeRF quality, with iterative training and results analysis being crucial parts of their workflow.
-Tools like TensorBoard are utilized for quantifying variations in training outcomes. 
+Tools like TensorBoard \cite{noauthor_tensorflowtensorboard_2024} are utilized for quantifying variations in training outcomes. 
 \cite{P1, P3}
+
+\cleanchapterquote{Probleme? Optimisierung, also Datensätze.
+Beim Training würde ich sagen, eine gro{\ss}e Sache ist die Optimierung und die Parameterisierung, vor allem in Nerfstudio.}{Participant 1}{}
 
 \paragraph{User Interface and Accessibility}
 A consensus among users highlights the need for an intuitive, all-encompassing user interface that minimizes reliance on console commands. 
 Features that allow users to visually navigate and control the NeRF creation pipeline, including real-time progress feedback and the ability to pause and adjust processes at any stage, are highly valued. 
 \cite{P1, P2, P3}
+
+\cleanchapterquote{Das Wichtigste wäre für mich, dass ich halt nichts in der Konsole machen muss.
+Also, dass ich einfach das Programm starte und dann alles in der UI machen kann, hochladen und dann auch irgendwie durchgeführt werde.}{Participant 2}{}
 
 % \paragraph{Web-Based Interfaces and Collaboration}
 
@@ -53,6 +62,8 @@ Features that allow users to visually navigate and control the NeRF creation pip
 Effective error feedback and clear, informative visualization tools are critical for user satisfaction. 
 Users express frustration with vague error messages and cumbersome command-line interactions for troubleshooting and adjustments. 
 \cite{P2, P3}
+
+\cleanchapterquote{Also wenn eine Fehlermeldung ist, dann wäre es halt cool, wenn die einem das irgendwie genauer sagen würden, was der Fehler ist, und dann nicht einfach so irgendein Log.}{Participant 2}{}
 
 \paragraph{File Management and Project Structure}
 Efficient file and project management, with clear distinctions between different stages (preprocessing, training, rendering) and support for various input formats, is essential. 
@@ -66,7 +77,7 @@ Users discuss challenges with current tools regarding data organization, suggest
 
 \paragraph{Integration and Export Options}
 Strong integration capabilities with popular 3D and VFX software and flexible export options are desired. 
-Users discuss the importance of being able to easily import NeRF-generated scenes into tools like Unreal Engine or Blender for further processing and use in production-quality projects​​.
+Users discuss the importance of being able to easily import NeRF-generated scenes into tools like Unreal Engine \cite{noauthor_unreal_nodate} or Blender \cite{noauthor_blender_nodate} for further processing and use in production-quality projects​​.
 \cite{P1, P2, P4}
 
 \paragraph{Multi-Mode Operation}
@@ -74,6 +85,8 @@ The necessity for multi-mode operation in NeRF tool interfaces emerges as a sign
 A simplified mode is envisioned to cater to beginners, offering an intuitive and streamlined workflow, whereas an advanced mode is tailored for experienced users requiring detailed control over the NeRF creation process. 
 % By embracing a multi-mode approach, NeRF tools can democratize access to sophisticated 3D modeling capabilities, fostering a creative and inclusive environment for users of all backgrounds.
 \cite{P1, P2, P3, P4}
+
+\cleanchapterquote{Es muss halt verständlich genug sein, dass Filmstudenten davon keine Angst haben. Aber trotzdem, [das Ma{\ss}] wie sehr du deine Parameter ansetzen kannst [nicht] zu limitieren.}{Participant 1}{}
 
 \subsection*{Summary}
 
