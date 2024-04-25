@@ -97,7 +97,7 @@ Once the input data is uploaded, it has to be processed before it can be used fo
   \label{fig:design:input-section}
 \end{figure}
 
-The pre-processing can be configured by the user, this includes parameters such as the lens type, or matching method \frefadd{fig:design:input-section}{3}.
+The pre-processing can be configured by the user, this includes parameters such as the lens type or matching method \frefadd{fig:design:input-section}{3}.
 Parameter input fields vary based on the type of input data and are only shown when relevant.
 Every parameter has a tooltip that explains its purpose, and advanced settings can be accessed by hovering over the question mark next to the parameter name.
 For advanced users, the settings can be further customized by activating the advanced settings using the toggle in the top right \fref{fig:design:advanced-settings}.
@@ -132,12 +132,12 @@ The viewer can be opened to inspect the results of the training run, or an exist
 
 \subsubsection*{Viewer Section}
 
-The viewer section is the final step in the process, and allows users to inspect their NeRF model, while it is still training or after the training has finished \frefadd{fig:design:viewer-section}{1}.
+The viewer section is the final step in the process and allows users to inspect their NeRF model, while it is still training or after the training has finished \frefadd{fig:design:viewer-section}{1}.
 At its core is the Nerfstudio Viewer that is integrated into the application.
 It provides users with all the functionality available in the standalone version, with a few integrations that simplify the render process.
 Instead of providing commands that have to be executed in the terminal, the rendering is started by clicking a button.
 
-The renders are listed below the viewer, and once they finished processing, they can be downloaded to the user's machine \frefadd{fig:design:viewer-section}{2}.
+The renders are listed below the viewer, and once they finish processing, they can be downloaded to the user's machine \frefadd{fig:design:viewer-section}{2}.
 Due to the narrow layout of the page, the viewer can easily be opened in a new tab to provide a better viewing experience.
 
 \begin{figure}[h!]
