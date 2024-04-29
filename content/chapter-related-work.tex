@@ -21,7 +21,7 @@ This eliminates the need for high-end local GPU setups, broadening the tool's ac
 \begin{figure}[h!]
   \centering
   \includegraphics[width=\textwidth]{figures/related-nerfstudio-viewer.png}
-  \caption{Nerfstudio's real-time web viewer. (from \cite{tancik_nerfstudio_2023})}
+  \caption{Nerfstudio's real-time web viewer \cite{tancik_nerfstudio_2023}.}
   \label{fig:nerfstudio-viewer}
 \end{figure}
 
@@ -72,6 +72,37 @@ Luma AI offers various export formats for the generated scenes, allowing users t
 They also provide a social platform for sharing and viewing NeRFs, fostering a community around the technology.
 
 \paragraph{Limitations}
-Despite its innovative approach, Luma AI's main limitation lies in the lack of user control over the NeRF training process. 
-The automated system, while user-friendly, does not allow for adjustments in the training parameters or the refinement of the final model. 
+Despite its innovative approach, Luma AI's main limitation lies in the lack of user control over the NeRF training process.
+The automated system, while user-friendly, does not allow for adjustments in the training parameters or the refinement of the final model.
 This lack of control can result in less than optimal NeRF outputs for users who may require more precise or customized 3D representations.
+Additionally, the proprietary nature of LumaAI may be a concern for users who prefer the flexibility and transparency offered by open-source solutions, as it limits the ability to understand and modify the underlying processes.
+
+\section{Volinga Suite}
+
+The Volinga Suite \cite{noauthor_volinga_nodate} aims to integrate Neural Radiance Fields into professional workflows.
+It simplifies its adoption by leveraging familiar platforms, thereby broadening the accessibility of NeRF to a wider range of users.
+
+\paragraph{Unreal Engine Integration}
+Volinga's integration as a plugin for Unreal Engine \cite{noauthor_unreal_nodate} is a core feature that allows users to adopt NeRF seamlessly into existing pipelines.
+This integration is valuable for professionals already familiar with Unreal Engine, as it enables them to utilize advanced NeRF functionalities without additional training or significant adjustments to their current workflows.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/related-volinga.png}
+  \caption{Volinga Suite's integrated viewer in Unreal Engine \cite{noauthor_volinga_nodate}.}
+  \label{fig:volinga-viewer}
+\end{figure}
+
+\paragraph{Enhanced Control Over Training}
+Volinga distinguishes itself from LumaAI by offering enhanced control over the NeRF training process.
+Users have the ability to locally adjust numerous parameters, which enables precise tuning of the model's performance to meet specific project requirements.
+This level of control is beneficial for projects where the quality of the NeRF output is critical.
+
+\paragraph{Local and Remote Training Capabilities}
+The Volinga Creator component supports both local and remote training of NeRF models.
+While remote training offers convenience and ease of access, local training provides advanced users with extensive configuration options and the ability to leverage powerful hardware, thereby maximizing the potential of NeRF technology under various usage scenarios.
+
+\paragraph{Limitations}
+Volinga Suite's reliance on Unreal Engine for its integrated viewer may limit users who are unfamiliar with or do not wish to use this specific platform.
+The web based viewer of Nerfstudio and Luma AI is more accessible in this regard.
+Although Volinga is actively contributing to the open-source projects Nerfstudio, it being proprietary may also deter users or organisations that prefer open-source solutions.
