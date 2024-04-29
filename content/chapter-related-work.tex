@@ -3,7 +3,36 @@
 \chapter{Related Work}
 \label{sec:related}
 
-\section{Nerfstudio}
+\section{Instant NGP}
+
+Instant Neural Graphics Primitives (Instant NGP) \cite{muller_instant_2022}, developed by NVIDIA, utilizes a multiresolution hash encoding that simplifies models while maintaining high performance and quality.
+Its GUI plays a crucial role in enhancing accessibility and functionality, making it an important advancement in neural graphics technology.
+
+\paragraph{Simplified User Interaction}
+The user interface of Instant NGP facilitates training and visualization of NeRFS \fref{fig:instant-ngp}.
+User can interactively explore 3D scenes in real-time and adjust parameters to achieve desired results.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{figures/realted-instant-ngp.png}
+  \caption{Instant NGP's GUI \cite{muller_instant_2022}.}
+  \label{fig:instant-ngp}
+\end{figure}
+
+\paragraph{VR Mode}
+The VR mode of Instant NGP enhances user interaction by enabling immersive exploration of 3D environments in real-time.
+This feature is especially beneficial for professionals like architects and game developers, who gain from experiencing their virtual spaces as if they were real.
+
+\paragraph{Camera Path Editor}
+Instant NGP's camera path editor allows users to intuitively create and adjust camera trajectories, enhancing the creation of animations.
+This tool is essential for professionals in visualization and animation, providing precise control over camera movements for detailed and smooth presentations.
+
+\paragraph{Limitations}
+Despite advancements, Instant NGP's technical complexity and reliance on command-line interfaces for key operations remain significant barriers.
+These aspects limit its accessibility to those with specific technical skills and deter broader creative uses.
+The user experience still requires technical knowledge, underscoring the need for more intuitive interfaces that simplify interaction and expand its user base beyond technical specialists.
+
+\section{NeRFStudio}
 \label{sec:related:nerfstudio}
 
 Nerfstudio \cite{tancik_nerfstudio_2023} represents a significant advancement in making Neural Radiance Fields accessible to non-technical users.
@@ -11,12 +40,12 @@ Its design focuses on modularity, ease of use, and integration capabilities, whi
 
 \paragraph{Modularity}
 Nerfstudio is built on a modular framework that allows users to easily customize and extend their NeRF implementations.
-This modularity supports various input data formats, making it versatile for different real-world scenarios.
+This modularity supports various input data formats, making it versatile for different real-world scenarios and setting it apart from Instant NGP.
 A wide range of existing methods are already well integrated into Nerfstudio, including Instant-GPT \cite{muller_instant_2022}, their own Nerfacto \cite{noauthor_nerfacto_nodate} method that combines various existing techniques, and several of the previously mentioned extensions \cite{haque_instruct-nerf2nerf_2023,jan-niklas_dihlmann_signerf_2024}.
 
 \paragraph{Real-Time Web Viewer}
 One of the standout features of Nerfstudio is its real-time web viewer, which enables visualization of NeRF training and outputs directly through a web browser.
-This eliminates the need for high-end local GPU setups, broadening the tool's accessibility \cite{noauthor_nerfstudio-projectviser_2024}.
+This eliminates the need for high-end local GPU setups, such as in the case of Instant NGP, broadening the tool's accessibility \cite{noauthor_nerfstudio-projectviser_2024}.
 
 \begin{figure}[h!]
   \centering
@@ -26,7 +55,7 @@ This eliminates the need for high-end local GPU setups, broadening the tool's ac
 \end{figure}
 
 \paragraph{Flexibility of Data Handling}
-Nerfstudio simplifies the process of importing and exporting data, supporting a wide range of formats to accommodate various use cases.
+Nerfstudio simplifies importing and exporting data, supporting a wide range of formats to accommodate various use cases.
 Users can easily import images and videos, including data from mobile capture apps such as Polycam \cite{noauthor_polycam_nodate} and Record3D \cite{noauthor_record3d_nodate}.
 Additionally, the framework supports exporting results in various formats such as videos, point clouds, and meshes.
 This flexibility allows users to integrate NeRF outputs into diverse creative and technical applications.
@@ -36,10 +65,9 @@ Being open-source, Nerfstudio encourages community-driven development and contin
 This openness also allows users to adapt the tool to their specific needs.
 
 \paragraph{Limitations}
-
-Despite advancements, Nerfstudio's technical complexity and reliance on command-line interfaces for key operations like model training and data preprocessing remain significant barriers.
-These aspects limit its accessibility to those with specific technical skills and deter broader creative uses.
-The user experience still requires technical knowledge, underscoring the need for more intuitive interfaces that simplify interaction and expand its user base beyond technical specialists.
+Nerfstudio is a welcome advancement, improving on much of the features of Instant NGP. 
+However, it still requires a certain level of technical knowledge to operate effectively, limiting its accessibility to non-technical users.
+The tool's primary interactions are still command-line based, posing a barrier to users who may prefer more intuitive graphical interfaces.
 
 \section{Luma AI}
 \label{sec:related:luma}
