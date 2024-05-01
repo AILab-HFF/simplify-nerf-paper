@@ -14,12 +14,12 @@ This section interprets the key findings from the study in relation to the initi
 
 The current landscape of NeRF frameworks, notably Instant NGP and Nerfstudio, offers varied interaction capabilities tailored to different user needs in the creation and manipulation of 3D scenes.
 Nerfstudio stands out with its modular design and real-time web viewer, allowing users to interact dynamically with NeRF models.
-This design supports not only professionals who require robust tools for detailed manipulation but also provides a platform for future innovation and research.
+This design supports not only professionals who require robust tools for detailed manipulation but also provides a platform for future innovation and research (see Section~\ref{sec:related:nerfstudio}).
 
 However, findings from initial interviews indicate that these frameworks typically require substantial technical knowledge, which can limit their use to those with advanced skills, hindering broader adoption.
 In contrast, platforms like Luma AI prioritize accessibility through a more streamlined, user-friendly interface that automates many NeRF processes.
 This approach significantly lowers the entry barrier for non-technical users.
-Yet, this simplicity often comes at the cost of reduced control over the final outputs, which can be a critical drawback in professional settings where precise adjustments and customizations are crucial.
+Yet, this simplicity often comes at the cost of reduced control over the final outputs, which can be a critical drawback in professional settings where precise adjustments and customizations are crucial (see Section~\ref{sec:user-research:findings}).
 
 This analysis highlights a clear need for NeRF frameworks that not only simplify the user experience but also retain the advanced functionalities required by professionals, informing much of the design and development of the web-based editor in this study.
 
@@ -27,31 +27,40 @@ This analysis highlights a clear need for NeRF frameworks that not only simplify
 
 \emph{How can the development of a user-friendly web-based interface for NeRF improve its accessibility and simplify the creation and manipulation processes?}
 
-The development of our web-based editor for NeRF was specifically designed to enhance accessibility by minimizing the need for extensive technical knowledge.
-This approach has been effective in making NeRF technology more approachable, particularly noted in the positive feedback from the user study.
+The development of the web-based editor for NeRF was specifically designed to enhance accessibility by minimizing the need for extensive technical knowledge.
+This approach has been effective in making NeRF technology more approachable, particularly noted in the positive feedback from the user study (see Section~\ref{sec:results:overall_impressions}).
 Less experienced participants found the interface intuitive and easy to navigate, enabling them to create and manipulate 3D scenes with minimal guidance.
-On the other hand, professional users appreciated the streamlined workflow and the depth of control offered by the editor.
+On the other hand, professional users appreciated the streamlined workflow and the depth of control offered by the tool.
 
-However, despite the initial success in improving accessibility, the testing phase also revealed several usability issues that could impede user efficiency and satisfaction.
-These included challenges with interface navigation, feature discoverability, and responsiveness of the tool under various user actions.
-Such feedback underscores the importance of continuous user testing and iterative development to address these concerns. 
+However, despite the initial success in improving accessibility, the testing phase also revealed several usability issues that could impede user efficiency and satisfaction (see Section~\ref{sec:results:issues}).
+These included challenges with interface navigation, wording, and responsiveness of the tool under various user actions.
+Such feedback underscores the importance of continuous user testing and iterative development to address these concerns.
 
 This iterative approach is essential to refine the interface, ensuring it not only meets the basic needs of non-technical users but also scales to support the complex demands of professional environments.
-By continually enhancing the interface, the editor can better support a wide spectrum of users in efficiently creating and manipulating NeRF-based scenes.
+By continually enhancing the interface, the tool can better support a wide spectrum of users in efficiently working with NeRF.
 
 \subsection*{RQ3: Challenges in Developing Web-Based NeRF Tools}
+\emph{What are the primary technical challenges and limitations associated with building a NeRF interface and how can these be overcome?}
 
-\emph{What are the primary challenges and limitations associated with building a NeRF interface and how can these be overcome?}
+The technical development of a web-based NeRF editor introduces specific challenges related to remote operation, real-time feedback, and integration with existing frameworks:
 
-The endeavor to develop web-based NeRF tools has surfaced numerous usability challenges, especially due to the diverse levels of technical expertise among potential users.
-A central challenge lies in the balance between simplicity and functionality.
-The interface must remain approachable for novices, which suggests a streamlined, intuitive design, while still incorporating the advanced features that experienced users expect for precise and powerful manipulation of NeRF models.
+\paragraph{Remote Operation} NeRF processing is computationally intensive, typically requiring the processing to be offloaded to a server.
+The prototype leverages a client-server architecture to allow users to manage NeRF-related tasks through a web browser efficiently (see Section~\ref{sec:system:architecture}).
+    
+\paragraph{Real-Time Feedback} To enhance user experience, immediate feedback on user actions is crucial.
+The prototype uses WebSockets to establish a real-time connection between the client and server, facilitating instant updates on running processes (see Section~\ref{sec:user-research:findings}).
+    
+\paragraph{Integration with Existing Frameworks} Integrating the web-based editor with Nerfstudio presents significant technical hurdles.
+Currently, server-side interactions are limited to command-line interface commands, which complicates maintainability and limits deeper integration.
+Direct integration could circumvent the need for makeshift solutions such as parsing log statements for progress tracking.
+On the client-side, Nerfstudio's viewer is hosted separately and embedded via an iframe in the web-based editor.
+This setup restricts direct communication between the interfaces, leading to a disjointed user experience.
+Furthermore the visual and functional disparities between the two interfaces can cause user confusion and inconsistency (see Section~\ref{sec:system:challenges}).
 
-Additionally, the integration of our web-based editor with established NeRF frameworks like Nerfstudio introduced complexities related to compatibility and user experience optimization. Ensuring that our tool works seamlessly with these existing systems without disrupting their operational integrity or user familiarity requires careful architectural and design considerations.
-
-To overcome these challenges, our approach emphasizes the need for deeper integration of the web-based editor with existing NeRF frameworks. This would involve enhancing the modularity of the editor, allowing for better customization and scalability to accommodate the specific needs and preferences of different user groups. Furthermore, adopting a user-centered design process that involves continuous feedback loops with both novice and professional users can help identify usability issues early and guide the iterative development process. This strategy ensures that enhancements and functionalities are not only technically sound but also genuinely useful and user-friendly.
-
-Through such focused development efforts, it is feasible to create a NeRF interface that is both accessible to beginners and sufficiently robust for professional use, ultimately broadening the adoption and application of NeRF technology across various sectors.
+To overcome these challenges, a more integrated approach is necessary.
+Enhancing the server-side architecture to support direct API calls rather than relying on CLI can improve maintainability and functionality.
+On the client-side, integrating Nerfstudio's viewer directly into the web-based editor's framework would enable better synchronization and a unified user experience.
+This would not only streamline user interactions but also align the UI elements and workflow, reducing confusion and enhancing usability.
 
 
 \section{Implications for the Film and VFX Industry}
@@ -104,10 +113,10 @@ The project creation process was moved into a modal dialog, which not only elimi
 \end{figure}
 
 \paragraph{File Upload Improvements}
-The file upload process was improved by adding some guardrails, to ensure user would not accidentally skip a step. 
+The file upload process was improved by adding some guardrails, to ensure user would not accidentally skip a step.
 The upload button starts out disabled, so that the only interactive element is the file-input field.
 Once a file is selected, the button becomes active, indicating to the user that they can proceed to upload their selected file.
-Only one the file is uploaded, the UI elements related to pre-processing appear, guiding the user through the next steps. 
+Only one the file is uploaded, the UI elements related to pre-processing appear, guiding the user through the next steps.
 This solution is likely to prevent many of the issues users encountered when uploading files during testing. \fref{fig:fix-4}
 
 
