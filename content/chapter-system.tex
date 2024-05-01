@@ -130,7 +130,7 @@ Building the prototype against the nerfstudio CLI offered a useful layer of abst
 This enabled rapid development, without having to worry about the underlying implementation details of a huge codebase.
 However, this abstraction comes at the cost of flexibility and overall complexity of the system.
 
-The CLI is built using tyro \cite{yi_brentyityro_2024}, a tool for building command line interfaces in Python using configuration objects.
+The CLI is built using tyro \cite{yi_tyro_nodate}, a tool for building command line interfaces in Python using configuration objects.
 Efforts were made to translate the configuration objects into TypeScript objects, that could be used throughout the project.
 This would allow for a more seamless integration of the CLI.
 Sadly, this was not possible, as the configuration objects are not easily serializable, and would require a lot of additional work to implement.

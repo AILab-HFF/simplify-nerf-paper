@@ -28,11 +28,13 @@
 	file = {Wang et al. - 2022 - CLIP-NeRF Text-and-Image Driven Manipulation of N.pdf:/Users/eduard.von-briesen/Zotero/storage/QSE9GGYZ/Wang et al. - 2022 - CLIP-NeRF Text-and-Image Driven Manipulation of N.pdf:application/pdf},
 }
 
-@misc{bar-tal_text2live_2022,
+@inproceedings{bar-tal_text2live_2022,
 	title = {Text2LIVE: Text-Driven Layered Image and Video Editing},
+	pages = {707--723},
+	booktitle = {European Conference on Computer Vision},
+	publisher = {Springer},
 	author = {Bar-Tal, Omer and Ofri-Amar, Dolev and Fridman, Rafail and Kasten, Yoni and Dekel, Tali},
 	date = {2022},
-	note = {\_eprint: 2204.02491},
 	file = {Bar-Tal et al. - 2022 - Text2LIVE Text-Driven Layered Image and Video Edi.pdf:/Users/eduard.von-briesen/Zotero/storage/I3G8Z7US/Bar-Tal et al. - 2022 - Text2LIVE Text-Driven Layered Image and Video Edi.pdf:application/pdf},
 }
 
@@ -46,8 +48,6 @@
 	journaltitle = {{ACM} Trans. Graph.},
 	author = {Müller, Thomas and Evans, Alex and Schied, Christoph and Keller, Alexander},
 	date = {2022-07},
-	note = {Place: New York, {NY}, {USA}
-Publisher: {ACM}},
 	file = {Müller et al. - 2022 - Instant Neural Graphics Primitives with a Multires.pdf:/Users/eduard.von-briesen/Zotero/storage/NP73B3FX/Müller et al. - 2022 - Instant Neural Graphics Primitives with a Multires.pdf:application/pdf},
 }
 
@@ -57,14 +57,6 @@ Publisher: {ACM}},
 	author = {Bao, Chong and Zhang, Yinda and Yang, Bangbang and Fan, Tianxing and Yang, Zesong and Bao, Hujun and Zhang, Guofeng and Cui, Zhaopeng},
 	date = {2023},
 	file = {Bao et al. - 2023 - SINE Semantic-driven Image-based NeRF Editing wit.pdf:/Users/eduard.von-briesen/Zotero/storage/WTEP74IW/Bao et al. - 2023 - SINE Semantic-driven Image-based NeRF Editing wit.pdf:application/pdf},
-}
-
-@misc{wu_palettenerf_2022,
-	title = {{PaletteNeRF}: Palette-based Color Editing for {NeRFs}},
-	author = {Wu, Qiling and Tan, Jianchao and Xu, Kun},
-	date = {2022},
-	note = {\_eprint: 2212.12871},
-	file = {Wu et al. - 2022 - PaletteNeRF Palette-based Color Editing for NeRFs.pdf:/Users/eduard.von-briesen/Zotero/storage/B75YG3CP/Wu et al. - 2022 - PaletteNeRF Palette-based Color Editing for NeRFs.pdf:application/pdf},
 }
 
 @inproceedings{haque_instruct-nerf2nerf_2023,
@@ -107,7 +99,7 @@ Publisher: {ACM}},
 }
 
 @online{noauthor_trpc_nodate,
-	title = {{tRPC} - Move Fast and Break Nothing. End-to-end typesafe {APIs} made easy. {\textbar} {tRPC}},
+	title = {{tRPC} - Move Fast and Break Nothing. End-to-end typesafe {APIs} made easy.},
 	url = {https://trpc.io/},
 	urldate = {2024-03-25},
 	file = {tRPC - Move Fast and Break Nothing. End-to-end typesafe APIs made easy. | tRPC:/Users/eduard.von-briesen/Zotero/storage/QUK4WCCG/trpc.io.html:text/html},
@@ -147,30 +139,6 @@ Publisher: {ACM}},
 	urldate = {2024-03-25},
 	langid = {english},
 	file = {Snapshot:/Users/eduard.von-briesen/Zotero/storage/GA2YJUU7/daisyui.com.html:text/html},
-}
-
-@software{noauthor_nerfstudio-projectviser_2024,
-	title = {nerfstudio-project/viser},
-	rights = {Apache-2.0},
-	url = {https://github.com/nerfstudio-project/viser},
-	abstract = {Web-based 3D visualization + Python},
-	publisher = {nerfstudio},
-	urldate = {2024-03-25},
-	date = {2024-03-25},
-	note = {original-date: 2022-11-16T00:13:51Z},
-	keywords = {python, visualization, web},
-}
-
-@software{yi_brentyityro_2024,
-	title = {brentyi/tyro},
-	rights = {{MIT}},
-	url = {https://github.com/brentyi/tyro},
-	abstract = {Zero-effort {CLI} interfaces \& config objects, from types},
-	author = {Yi, Brent},
-	urldate = {2024-03-31},
-	date = {2024-03-26},
-	note = {original-date: 2021-10-05T08:54:08Z},
-	keywords = {argparse, argument-parsing, dataclasses},
 }
 
 @article{mildenhall_nerf_2021,
@@ -362,7 +330,6 @@ Publisher: {ACM}},
 	abstract = {Deep networks have recently enjoyed enormous success when applied to recognition and classification problems in computer vision [22, 33], but their use in graphics problems has been limited ([23, 7] are notable recent exceptions). In this work, we present a novel deep architecture that performs new view synthesis directly from pixels, trained from a large number of posed image sets. In contrast to traditional approaches, which consist of multiple complex stages of processing, each of which requires careful tuning and can fail in unexpected ways, our system is trained end-to-end. The pixels from neighboring views of a scene are presented to the network, which then directly produces the pixels of the unseen view. The benefits of our approach include generality (we only require posed image sets and can easily apply our method to different domains), and high quality results on traditionally difficult scenes. We believe this is due to the end-to-end nature of our system, which is able to plausibly generate pixels according to color, depth, and texture priors learnt automatically from the training data. We show view interpolation results on imagery from the {KITTI} dataset [12], from data from [1] as well as on Google Street View images. To our knowledge, our work is the first to apply deep learning to the problem of new view synthesis from sets of real-world, natural imagery.},
 	eventtitle = {2016 {IEEE} Conference on Computer Vision and Pattern Recognition ({CVPR})},
 	pages = {5515--5524},
-	booktitle = {2016 {IEEE} Conference on Computer Vision and Pattern Recognition ({CVPR})},
 	author = {Flynn, John and Neulander, Ivan and Philbin, James and Snavely, Noah},
 	urldate = {2024-04-19},
 	date = {2016-06},
@@ -431,7 +398,6 @@ Publisher: {ACM}},
 	abstract = {In this work, we address the lack of 3D understanding of generative neural networks by introducing a persistent 3D feature embedding for view synthesis. To this end, we propose {DeepVoxels}, a learned representation that encodes the view-dependent appearance of a 3D scene without having to explicitly model its geometry. At its core, our approach is based on a Cartesian 3D grid of persistent embedded features that learn to make use of the underlying 3D scene structure. Our approach combines insights from 3D geometric computer vision with recent advances in learning image-to-image mappings based on adversarial loss functions. {DeepVoxels} is supervised, without requiring a 3D reconstruction of the scene, using a 2D re-rendering loss and enforces perspective and multi-view geometry in a principled manner. We apply our persistent 3D scene representation to the problem of novel view synthesis demonstrating high-quality results for a variety of challenging scenes.},
 	eventtitle = {2019 {IEEE}/{CVF} Conference on Computer Vision and Pattern Recognition ({CVPR})},
 	pages = {2432--2441},
-	booktitle = {2019 {IEEE}/{CVF} Conference on Computer Vision and Pattern Recognition ({CVPR})},
 	author = {Sitzmann, Vincent and Thies, Justus and Heide, Felix and Nießner, Matthias and Wetzstein, Gordon and Zollhöfer, Michael},
 	urldate = {2024-04-22},
 	date = {2019-06},
@@ -578,29 +544,26 @@ Publisher: {ACM}},
 	title = {{SIGNeRF}: Scene Integrated Generation for Neural Radiance Fields},
 	doi = {10.48550/arxiv.2401.01647},
 	abstract = {Advances in image diffusion models have recently led to notable improvements in the generation of high-quality images. In combination with Neural Radiance Fields ({NeRFs}), they enabled new opportunities in 3D generation. However, most generative 3D approaches are object-centric and applying them to editing existing photorealistic scenes is not trivial. We propose {SIGNeRF}, a novel approach for fast and controllable {NeRF} scene editing and scene-integrated object generation. A new generative update strategy ensures 3D consistency across the edited images, without requiring iterative optimization. We find that depth-conditioned diffusion models inherently possess the capability to generate 3D consistent views by requesting a grid of images instead of single views. Based on these insights, we introduce a multi-view reference sheet of modified images. Our method updates an image collection consistently based on the reference sheet and refines the original {NeRF} with the newly generated image set in one go. By exploiting the depth conditioning mechanism of the image diffusion model, we gain fine control over the spatial location of the edit and enforce shape guidance by a selected region or an external mesh.},
-	journaltitle = {{arXiv}.org},
+	journaltitle = {{arXiv} preprint {arXiv}:2401.01647},
 	shortjournal = {{arXiv}.org},
 	author = {{Jan-Niklas Dihlmann} and {Andreas Engelhardt} and {Hendrik P. A. Lensch}},
 	date = {2024},
 }
 
-@online{ai_luma_nodate,
+@online{noauthor_luma_nodate,
 	title = {Luma {AI}},
 	url = {https://lumalabs.ai/},
 	abstract = {Building visual {AI} to expand human imagination and capabilities},
-	titleaddon = {Luma {AI}},
-	author = {{AI}, Luma},
 	urldate = {2024-04-25},
 	langid = {english},
 	file = {Snapshot:/Users/eduard.von-briesen/Zotero/storage/HUVGP3KH/lumalabs.ai.html:text/html},
 }
 
-@software{noauthor_tensorflowtensorboard_2024,
+@online{noauthor_tensorflowtensorboard_2024,
 	title = {tensorflow/tensorboard},
 	rights = {Apache-2.0},
 	url = {https://github.com/tensorflow/tensorboard},
 	abstract = {{TensorFlow}'s Visualization Toolkit},
-	publisher = {tensorflow},
 	urldate = {2024-04-25},
 	date = {2024-04-24},
 	note = {original-date: 2017-05-15T20:08:07Z},
@@ -610,7 +573,6 @@ Publisher: {ACM}},
 	title = {Unreal Engine},
 	url = {https://www.unrealengine.com/en-US/home},
 	abstract = {Whatever your vision, bring it to life with Unreal Engine: the world's most advanced real-time 3D creation tool. Join our community of developers and get started today.},
-	titleaddon = {Unreal Engine},
 	urldate = {2024-04-25},
 	langid = {american},
 }
@@ -632,14 +594,6 @@ Publisher: {ACM}},
 	langid = {american},
 }
 
-@online{noauthor_express_nodate,
-	title = {Express - Node.js-Framework von Webanwendungen},
-	url = {https://expressjs.com/de/},
-	urldate = {2024-04-25},
-	langid = {german},
-	file = {Snapshot:/Users/eduard.von-briesen/Zotero/storage/NJPIYM8S/de.html:text/html},
-}
-
 @online{noauthor_sosci_nodate,
 	title = {{SoSci} Survey ‣ the Professional Solution for Your Online Survey},
 	url = {https://www.soscisurvey.de/},
@@ -652,4 +606,55 @@ Publisher: {ACM}},
 	url = {https://volinga.ai/},
 	urldate = {2024-04-29},
 	file = {Volinga Creator:/Users/eduard.von-briesen/Zotero/storage/DPYJ767I/volinga.ai.html:text/html},
+}
+
+@online{noauthor_nvlabsinstant-ngp_nodate,
+	title = {{NVlabs}/instant-ngp: Instant neural graphics primitives: lightning fast {NeRF} and more},
+	url = {https://github.com/NVlabs/instant-ngp/tree/master},
+	urldate = {2024-04-29},
+	file = {NVlabs/instant-ngp\: Instant neural graphics primitives\: lightning fast NeRF and more:/Users/eduard.von-briesen/Zotero/storage/RA2ANNZK/master.html:text/html},
+}
+
+@misc{wu_palettenerf_2022,
+	title = {{PaletteNeRF}: Palette-based Color Editing for {NeRFs}},
+	url = {http://arxiv.org/abs/2212.12871},
+	doi = {10.48550/arXiv.2212.12871},
+	shorttitle = {{PaletteNeRF}},
+	abstract = {Neural Radiance Field ({NeRF}) is a powerful tool to faithfully generate novel views for scenes with only sparse captured images. Despite its strong capability for representing 3D scenes and their appearance, its editing ability is very limited. In this paper, we propose a simple but effective extension of vanilla {NeRF}, named {PaletteNeRF}, to enable efficient color editing on {NeRF}-represented scenes. Motivated by recent palette-based image decomposition works, we approximate each pixel color as a sum of palette colors modulated by additive weights. Instead of predicting pixel colors as in vanilla {NeRFs}, our method predicts additive weights. The underlying {NeRF} backbone could also be replaced with more recent {NeRF} models such as {KiloNeRF} to achieve real-time editing. Experimental results demonstrate that our method achieves efficient, view-consistent, and artifact-free color editing on a wide range of {NeRF}-represented scenes.},
+	number = {{arXiv}:2212.12871},
+	publisher = {{arXiv}},
+	author = {Wu, Qiling and Tan, Jianchao and Xu, Kun},
+	urldate = {2024-05-01},
+	date = {2022-12-25},
+	eprinttype = {arxiv},
+	eprint = {2212.12871 [cs]},
+	keywords = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Graphics},
+	file = {arXiv Fulltext PDF:/Users/eduard.von-briesen/Zotero/storage/D4US25KL/Wu et al. - 2022 - PaletteNeRF Palette-based Color Editing for NeRFs.pdf:application/pdf;arXiv.org Snapshot:/Users/eduard.von-briesen/Zotero/storage/N3FQLTX2/2212.html:text/html},
+}
+
+@online{yi_tyro_nodate,
+	title = {tyro},
+	url = {https://brentyi.github.io/tyro/},
+	author = {Yi, Brent},
+	urldate = {2024-05-01},
+	file = {tyro:/Users/eduard.von-briesen/Zotero/storage/I238TZ9Y/tyro.html:text/html},
+}
+
+@online{noauthor_nerfstudio-projectviser_2024,
+	title = {nerfstudio-project/viser},
+	rights = {Apache-2.0},
+	url = {https://github.com/nerfstudio-project/viser},
+	abstract = {Web-based 3D visualization + Python},
+	urldate = {2024-05-01},
+	date = {2024-05-01},
+	note = {original-date: 2022-11-16T00:13:51Z},
+	keywords = {python, visualization, web},
+}
+
+@online{noauthor_express_nodate,
+	title = {Express - Node.js web application framework},
+	url = {https://expressjs.com/},
+	urldate = {2024-05-01},
+	langid = {english},
+	file = {Snapshot:/Users/eduard.von-briesen/Zotero/storage/UEE9KU5T/expressjs.com.html:text/html},
 }
