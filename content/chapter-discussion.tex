@@ -29,8 +29,8 @@ This analysis highlights a clear need for NeRF frameworks that not only simplify
 
 The development of the web-based editor for NeRF was specifically designed to enhance accessibility by minimizing the need for extensive technical knowledge.
 This approach has been effective in making NeRF technology more approachable, particularly noted in the positive feedback from the user study (see Section~\ref{sec:results:overall_impressions}).
-Less experienced participants found the interface intuitive and easy to navigate, enabling them to create and manipulate 3D scenes with minimal guidance.
-On the other hand, professional users appreciated the streamlined workflow and the depth of control offered by the tool.
+Participants with less experience found the interface intuitive and easy to navigate, enabling them to create and manipulate 3D scenes with minimal guidance.
+Professional users appreciated the streamlined workflow and the depth of control offered by the tool.
 
 However, despite the initial success in improving accessibility, the testing phase also revealed several usability issues that could impede user efficiency and satisfaction (see Section~\ref{sec:results:issues}).
 These included challenges with interface navigation, wording, and responsiveness of the tool under various user actions.
@@ -55,7 +55,7 @@ Currently, server-side interactions are limited to command-line interface comman
 Direct integration could circumvent the need for makeshift solutions such as parsing log statements for progress tracking.
 On the client-side, Nerfstudio's viewer is hosted separately and embedded via an iframe in the web-based editor.
 This setup restricts direct communication between the interfaces, leading to a disjointed user experience.
-Furthermore the visual and functional disparities between the two interfaces can cause user confusion and inconsistency (see Section~\ref{sec:system:challenges}).
+Additionally, the visual and functional disparities between the two interfaces can cause user confusion and inconsistency (see Section~\ref{sec:system:challenges}).
 
 To overcome these challenges, a more integrated approach is necessary.
 Enhancing the server-side architecture to support direct API calls rather than relying on CLI can improve maintainability and functionality.
@@ -134,7 +134,7 @@ Based on the issues identified during user testing, several adjustments were mad
 They still need to be tested and refined further, but the changes are expected to address the primary concerns raised by users.
 
 \paragraph{Improved Navigation}
-To address the confusion in navigation to the dashboard (\ref{sec:results:issues:navigation}), a dedicated button was added to the navigation bar.
+To address the confusion in navigation to the dashboard, a dedicated button was added to the navigation bar.
 This feature has should improved the clarity of  navigation to users significantly \fref{fig:fix-1}.
 
 \begin{figure}[htb]
@@ -145,14 +145,14 @@ This feature has should improved the clarity of  navigation to users significant
 \end{figure}
 
 \paragraph{Clarified Wording}
-The wording on the button to start the training process was changed from \emph{"Start Processing"} to \emph{"Start Training"}, which aligns better with user expectations and reduces confusion \fref{fig:fix-2}.
+The wording on the button to start the training process was changed from \emph{"Start Processing"} to \emph{"Start Training"}, which aligns better with user expectations and reduces confusion.
 
-\begin{figure}[htb]
-  \centering
-	\includegraphics[width=.7\textwidth]{figures/fix-2.png}
-	\caption{Consistent Wording for Training Button}
-  \label{fig:fix-2}
-\end{figure}
+% \begin{figure}[htb]
+%   \centering
+% 	\includegraphics[width=.7\textwidth]{figures/fix-2.png}
+% 	\caption{Consistent Wording for Training Button}
+%   \label{fig:fix-2}
+% \end{figure}
 
 \paragraph{Enhanced Project Creation}
 The project creation process was moved into a modal dialog, which not only eliminates a point of confusion but also clarified the need to name projects before creation \fref{fig:fix-3}.
