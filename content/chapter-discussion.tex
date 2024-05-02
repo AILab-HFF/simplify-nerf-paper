@@ -87,12 +87,13 @@ This included suggestions for virtual art exhibitions or highly stylised camera 
 The enthusiasm of participants for exploring these new possibilities indicates that NeRF has the potential to drive innovation within the film and VFX industry, and that further exploration is warranted in this area.  
 
 \paragraph{Conerns and Limitations}
-One significant concern raised by professionals in the film industry is the quality of NeRF models. These models often contain artifacts and noise that can be challenging to remove, particularly in complex scenes, rendering them unsuitable for high-quality production.
-During the user study, other limitations became apparent, including the static nature of the generated images and the quality of the output. The lack of a time dimension represents a significant limitation for the dynamic nature of film and video production.
+One significant concern raised by professionals in the film industry is the quality of NeRF models.
+These models often contain artifacts and noise that can be challenging to remove, particularly in complex scenes, rendering them unsuitable for high-quality production.
+During the user study, other limitations became apparent, including the static nature of the generated images and the quality of the output.
+The lack of a time dimension represents a significant limitation for the dynamic nature of film and video production.
 Although there have been some recent developments in the field of NeRF models that allow for the addition of motion  \cite{fridovich-keil_k-planes_2023}, the results remain limited and do not match the fidelity of static NeRF models.
 
 \paragraph{Accessibility and Adoption}
-
 Although the tool developed in this study was the first touchpoint for some filmmakers with NeRF technology, they were able to use it with confidence and saw potential for its use in production.
 Their feedback on the potential usage of NeRFs did not focus on the accessibility of the tool, but rather on the specific features that would be required for certain use cases.
 While accessibility and ease of use are not the primary concerns for professionals in the film industry, they are nevertheless important factors for the wider adoption of NeRF technology.
@@ -103,9 +104,28 @@ In light of these considerations, the potential for NeRF technology in the film 
 \section{Limitations}
 \label{sec:discussion:limitations}
 
-- only one design cycle of the prototype
-- limited user testing -> bigger group -> longer usage time on real word projects
-- only one use case -> more diverse use cases
+This study, while providing valuable insights into the usability and potential applications of a new NeRF web-based editor, is subject to several limitations that should be considered when interpreting the results.
+
+\paragraph{Size and Diversity of User Group}
+The user study was conducted with a small, diverse group of participants, which limits the generalizability of the quantitative results from the user experience questionnaire.
+The limited number of participants, their varied backgrounds, and different levels of NeRF expertise may skew the findings and are not necessarily representative of all potential users.
+Future studies could enhance validity by including a larger, more homogeneous group focusing on filmmakers to derive statistically significant insights and ensure broader applicability.
+
+\paragraph{User Study Tasks}
+The tasks assigned to participants were designed to be simple and guided, focusing primarily on basic functionalities.
+Participants were not required to engage with advanced features or given the freedom to explore the tool independently.
+This limited scope may not have fully tested the tool's capabilities, particularly in handling the complexity typical of real-world projects.
+Future research should incorporate a broader range of tasks, including those that engage with more advanced features and simulate real-world usage scenarios to provide a deeper understanding of the tool’s practical challenges and strengths.
+
+\paragraph{Comparison with Existing Tools}
+The study did not include a direct comparison to existing NeRF frameworks, such as those presented in Section~\ref{sec:related}.
+Such a comparison would have provided deeper insights into the strengths and limitations of existing tools, and how the prototype developed in this study compares to them.
+A comparative analysis would have also highlighted the unique features and functionalities of the web-based editor, and how it addresses the limitations of current NeRF frameworks.
+
+\paragraph{Design Iterations}
+The web-based editor was developed and evaluated within a single design cycle, potentially overlooking some usability issues and user feedback integration.
+Continuous iterative design, incorporating ongoing user feedback, is essential to refine the tool and address diverse user needs effectively.
+Subsequent iterations should aim to expand testing phases and include longer-term usage evaluations to thoroughly assess performance and user satisfaction over time.
 
 \section{Integration of User Feedback}
 \label{sec:discussion:user-feedback}
@@ -119,7 +139,7 @@ This feature has should improved the clarity of  navigation to users significant
 
 \begin{figure}[htb]
   \centering
-	\includegraphics[width=0.5\textwidth]{figures/fix-1.png}
+	\includegraphics[width=0.4\textwidth]{figures/fix-1.png}
 	\caption{Dedicated Button for Dashboard Navigation}
   \label{fig:fix-1}
 \end{figure}
@@ -128,7 +148,8 @@ This feature has should improved the clarity of  navigation to users significant
 The wording on the button to start the training process was changed from \emph{"Start Processing"} to \emph{"Start Training"}, which aligns better with user expectations and reduces confusion \fref{fig:fix-2}.
 
 \begin{figure}[htb]
-	\includegraphics[width=\textwidth]{figures/fix-2.png}
+  \centering
+	\includegraphics[width=.7\textwidth]{figures/fix-2.png}
 	\caption{Consistent Wording for Training Button}
   \label{fig:fix-2}
 \end{figure}
@@ -137,7 +158,8 @@ The wording on the button to start the training process was changed from \emph{"
 The project creation process was moved into a modal dialog, which not only eliminates a point of confusion but also clarified the need to name projects before creation \fref{fig:fix-3}.
 
 \begin{figure}[htb]
-	\includegraphics[width=\textwidth]{figures/fix-3.png}
+  \centering
+	\includegraphics[width=.7\textwidth]{figures/fix-3.png}
 	\caption{Modal Dialog for Project Creation}
   \label{fig:fix-3}
 \end{figure}
@@ -147,23 +169,23 @@ The file upload process was improved by adding some guardrails, to ensure user w
 The upload button starts out disabled, so that the only interactive element is the file-input field.
 Once a file is selected, the button becomes active, indicating to the user that they can proceed to upload their selected file.
 Only one the file is uploaded, the UI elements related to pre-processing appear, guiding the user through the next steps.
-This solution is likely to prevent many of the issues users encountered when uploading files during testing. \fref{fig:fix-4}
+This solution is likely to prevent many of the issues users encountered when uploading files during testing \fref{fig:fix-4}.
 
 
 \begin{figure}[htb]
   \begin{subfigure}{\textwidth}
     \centering
-    \includegraphics[width=.8\linewidth]{figures/fix-4.1.png}
+    \includegraphics[width=.7\linewidth]{figures/fix-4.1.png}
     \caption{Initial State}
   \end{subfigure}
   \begin{subfigure}{\textwidth}
     \centering
-    \includegraphics[width=.8\linewidth]{figures/fix-4.2.png}
+    \includegraphics[width=.7\linewidth]{figures/fix-4.2.png}
     \caption{File Selected}
   \end{subfigure}
   \begin{subfigure}{\textwidth}
     \centering
-    \includegraphics[width=.8\linewidth]{figures/fix-4.3.png}
+    \includegraphics[width=.7\linewidth]{figures/fix-4.3.png}
     \caption{File Uploaded}
   \end{subfigure}
 	\caption{Improved File Upload Process}
