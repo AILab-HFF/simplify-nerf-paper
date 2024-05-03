@@ -6,13 +6,13 @@
 \section{System Architecture}
 \label{sec:system:architecture}
 
-The architecture follows a standard client-server pattern, with the server functioning as a wrapper for the nerfstudio CLI, and the client as a web application.
-The server is responsible for handling incoming requests from the client and translating them into commands that the nerfstudio CLI could understand.
-Requests from the client are sent to the server using HTTP requests, and, in the case of an asynchronous operation, the server would update the client using WebSockets.
+The architecture follows a standard client-server pattern, with a service functioning as a wrapper for the nerfstudio CLI, and the client as a web application.
+The service is responsible for handling incoming requests from the client and translating them into commands that the nerfstudio CLI could understand.
+Requests from the client are sent to the service using HTTP, and, in the case of an asynchronous operation, the server updates the client using WebSockets \fref{sec:system:architecture}.
 
 \begin{figure}[htb]
 	\includegraphics[width=\textwidth]{figures/architecture-1.png}
-	\caption{System Architecture}
+	\caption{System Architecture Overview. The client communicates with the server, which in turn interacts with the nerfstudio CLI.}
 	\label{fig:system:example2}
 \end{figure}
 
@@ -30,9 +30,9 @@ Additionally, the daisyUI \cite{noauthor_daisyui_nodate} component library suppl
 \subsubsection{Extensibility}
 
 Extensibility was a key consideration during the development of the frontend, as the underlying nerfstudio CLI is in itself extendable.
-All parameters for processing and training a NeRF model are configurable using JSON or strongly typed TypeScript objects.
+All parameters for processing and training a NeRF model are configurable using JSON or strongly typed TypeScript objects (see Listing \ref{lst:config}).
 
-\begin{lstlisting}[style=ES6, caption=Parameter Option configuration]
+\begin{lstlisting}[style=ES6, caption=Minimal parameter configuration for 'Steps Per Save' input., label=lst:config]
 const stepsPerSave: NumberInput = {
 	name: "stepsPerSave",
 	label: "Steps Per Save",
@@ -73,10 +73,10 @@ This type-safety was useful in building the API, as nerfstudio endpoints require
 
 A major concern for the backend was the handling of asynchronous operations.
 Processes can often take several minutes to complete, and the user should be able to see the progress of these operations.
-tRPC implements a feature called subscriptions, which allows the client to subscribe to a certain event and receive updates when that event occurs.
-This is used for any long-running operations, such as pre-processing or training a NeRF model.
+tRPC implement subscriptions, which allows the client to subscribe to an event and receive updates when that event occurs.
+This is used for any long-running operations, such as pre-processing or training a NeRF model (see Listing \ref{lst:trpc}).
 
-\begin{lstlisting}[style=ES6, caption=Example tRPC endpoint for Pre-Processing]
+\begin{lstlisting}[style=ES6, caption=Example tRPC endpoint for Pre-Processing returning a subscription., label=lst:trpc]
 export const nerfstudioRouter = router({
 	process: publicProcedure
 		.input(
@@ -101,8 +101,7 @@ export const nerfstudioRouter = router({
 \end{lstlisting}
 
 Some additional endpoints were implemented using Express \cite{noauthor_express_nodate}.
-This includes the file upload endpoint, which is used to upload images and videos to the server.
-As well as the render endpoint, called through the viewer, as there does not exist a tRPC client for Python.
+This includes the file upload and render endpoints, due to limitations in tRPC discussed in Section \ref{sec:system:challenges}.
 
 All project related data is stored in a workspace directory, which is mounted as a volume in the docker container.
 This allows for the data to persist between container restarts, and for the user to access the data outside of the container.
@@ -120,7 +119,7 @@ The way tRPC handles subscriptions is also not ideal for long-running processes.
 If the client disconnects, the subscription is lost, and the client will lose the context for incoming events.
 A better solution could use a standard WebSocket connection, with the events containing the state necessary for the client to properly update the UI.
 
-As mentioned above, tRPC does not have a client for Python, which is necessary for the viewer.
+tRPC does not have a client for Python, which is needed when processes are started from the nerfstudio viewer.
 This required the implementation of another separate endpoint using Express, which is called by the viewer to render the NeRF model.
 All these limitations could be solved by using a more general-purpose framework, such as Express.
 
