@@ -6,32 +6,34 @@
 \section{Participant Selection Criteria}
 \label{sec:user-research:criteria}
 
-Participants were carefully selected based on their prior experience with NeRF technology and their connection to the film industry, resulting in a group of four experts. 
-This selection ensured a diversity of perspectives, encompassing a broad spectrum of technical proficiency and practical applications of NeRF. 
-By including individuals who have utilized NeRF in various capacities, the study aimed to uncover both the shared challenges faced by all users and the unique requirements of distinct user groups within the film industry.
+The participants were selected with care, taking into account their previous experience with NeRF technology and their connection to the film industry. 
+This resulted in a group of four experts. 
+The selection of participants ensured a diversity of perspectives, encompassing a broad spectrum of technical proficiency and practical applications of NeRF. 
+The study aimed to uncover both the shared challenges faced by all users and the unique requirements of distinct user groups within the film industry by including individuals who have utilized NeRF in various capacities.
 
 \section{Interview Methodology}
 \label{sec:user-research:interview}
 
-The interviews were designed as semi-structured conversations, following a core set of prepared questions (see Appendix \ref{sec:appendix:interview-questions}) while also allowing for spontaneous discussions and additional queries. 
-Conducted one-on-one (three online, one in person), these interviews facilitated a personalized dialogue with each participant, offering insights into individual experiences and perspectives. 
-Although the interviews were prepared in English, all conversations were held in German to ensure comfort and clarity for participants, potentially leading to more candid and informative discussions.
+The interviews were designed as semi-structured conversations, following a core set of prepared questions (see Appendix \ref{sec:appendix:interview-questions}).
+However they also allowed for spontaneous discussions and additional queries. 
+The interviews were conducted in a one-on-one format (three online, one in person), facilitating a personalized dialogue with each participant. This approach allowed for the collection of insights into individual experiences and perspectives. 
+Although the interviews were conducted in English, all conversations were held in German to ensure comfort and clarity for participants, potentially leading to more candid and informative discussions.
 
 The structured flow of questions began with learning about the participants' backgrounds and experiences with NeRF technology, gradually moving towards more detailed questions about their specific needs, challenges, and desired improvements in NeRF interfaces. 
-Participants were also invited to propose features or functionalities they believed would enhance the usability and effectiveness of a NeRF interface for their professional or academic projects.
+Additionally, participants were encouraged to suggest potential enhancements to the NeRF interface that they believed would enhance its usability and effectiveness for their professional or academic projects.
 
-To ensure comprehensive analysis, interviews were recorded and transcribed with participants' consent, allowing for a detailed review and coding of the responses. 
+To ensure comprehensive analysis, interviews were recorded and transcribed with the participants' consent, allowing for a detailed review and coding of the responses. 
 This process enabled the identification of recurring themes, challenges, and preferences across the participant group, providing a solid foundation for the subsequent phases of prototype development and user testing. 
-The insights gained from this initial research phase were instrumental in shaping the direction and focus of the interface design, ensuring it would effectively address the real-world needs of NeRF users.
+The insights gained from this initial research phase were instrumental in shaping the direction and focus of the interface design, ensuring that it would effectively address the real-world needs of NeRF users.
 
 \section{Key Findings}
 \label{sec:user-research:findings}
 
 
 \paragraph{NeRF in the Film Industry}
-NeRF technology is being explored for various applications in the film industry, such as visual effects, virtual production, and pre-production location scouting. 
+NeRF technology is being explored for various applications in the film industry, including visual effects, virtual production, and pre-production location scouting. 
 Despite its potential to simplify the creation of 3D scenes, current limitations in model quality, lack of editable models, and insufficient detail hinder its professional use. 
-However, its capability for quick 3D scene captures offers significant benefits for pre-visualization and planning in the pre-production phase, although concerns about model scale accuracy for export remain. 
+However, its capability for rapid 3D scene captures offers significant benefits for pre-visualization and planning in the pre-production phase, although concerns about model scale accuracy for export remain. 
 \cite{P2, P4}
 
 \cleanchapterquote{So in the planning phase I think [NeRF] was pretty well received, the set visit, the planning of the actual shoot, but the quality wasn't that convincing yet.\footnotemark}{Participant 4}{}
@@ -39,9 +41,9 @@ However, its capability for quick 3D scene captures offers significant benefits 
 
 
 \paragraph{Optimizing Parameters and Workflow}
-Creating NeRFs typically involves preprocessing input data, training models, and exporting outputs. 
+Creating NeRFs typically involves three main steps: pre-processing input data, training models, and exporting outputs. 
 Technical users emphasize the importance of parameter optimization in improving NeRF quality, with iterative training and results analysis being crucial parts of their workflow.
-Tools like TensorBoard \cite{noauthor_tensorflowtensorboard_2024} are utilized for quantifying variations in training outcomes. 
+Tools such as TensorBoard \cite{noauthor_tensorflowtensorboard_2024} are utilized for quantifying variations in training outcomes. 
 \cite{P1, P3}
 
 \cleanchapterquote{Problems? Optimization, i.e. data sets. In training, I would say a big thing is optimization and parameterization, especially in Nerfstudio.\footnotemark}{Participant 1}{}
@@ -49,7 +51,7 @@ Tools like TensorBoard \cite{noauthor_tensorflowtensorboard_2024} are utilized f
 Beim Training würde ich sagen, eine gro{\ss}e Sache ist die Optimierung und die Parameterisierung, vor allem in Nerfstudio.}
 
 \paragraph{User Interface and Accessibility}
-A consensus among users highlights the need for an intuitive, all-encompassing user interface that minimizes reliance on console commands. 
+A consensus among users indicates a clear need for an intuitive, comprehensive user interface that minimizes reliance on console commands.
 Features that allow users to visually navigate and control the NeRF creation pipeline, including real-time progress feedback and the ability to pause and adjust processes at any stage, are highly valued. 
 \cite{P1, P2, P3}
 
@@ -58,14 +60,14 @@ Features that allow users to visually navigate and control the NeRF creation pip
 
 \paragraph{Comprehensive Error Handling and Visualization}
 Effective error feedback and clear, informative visualization tools are critical for user satisfaction. 
-Users express frustration with vague error messages and cumbersome command-line interactions for troubleshooting and adjustments. 
+Users have expressed frustration with vague error messages and cumbersome command-line interactions for troubleshooting and adjustments. 
 \cite{P2, P3}
 
 \cleanchapterquote{So if there is an error message, then it would be cool if they would somehow tell you more precisely what the error is, and not just any log.\footnotemark}{Participant 2}{}
 \footnotetext{Also wenn eine Fehlermeldung ist, dann wäre es halt cool, wenn die einem das irgendwie genauer sagen würden, was der Fehler ist, und dann nicht einfach so irgendein Log.}
 
 \paragraph{File Management and Project Structure}
-Efficient file and project management, with clear distinctions between different stages (preprocessing, training, rendering) and support for various input formats, is essential. 
+Efficient file and project management, with clear distinctions between different stages and support for various input formats, is essential. 
 Users discuss challenges with current tools regarding data organization, suggesting improvements for handling input data and managing projects​​.
 \cite{P1, P3}
 
@@ -75,8 +77,9 @@ Users discuss the importance of being able to easily import NeRF-generated scene
 \cite{P1, P2, P4}
 
 \paragraph{Multi-Mode Operation}
-The necessity for multi-mode operation in NeRF tool interfaces emerges as a significant insight, underlining the importance of accommodating a broad spectrum of users, from novices to experts. 
-A simplified mode is envisioned to cater to beginners, offering an intuitive and streamlined workflow, whereas an advanced mode is tailored for experienced users requiring detailed control over the NeRF creation process. 
+The necessity for multi-mode operation in NeRF tool interfaces emerges as a significant insight, underscoring the importance of accommodating a broad spectrum of users, from novices to experts. 
+A simplified mode is proposed to cater to beginners, offering an intuitive and streamlined workflow.
+In contrast, an advanced mode is tailored for experienced users requiring detailed control over the NeRF creation process. 
 \cite{P1, P2, P3, P4}
 
 \cleanchapterquote{It just has to be understandable enough that film students aren't afraid of it. But still, not limit how much you adjust your parameters.\footnotemark}{Participant 1}{}
@@ -85,4 +88,4 @@ A simplified mode is envisioned to cater to beginners, offering an intuitive and
 \subsection*{Summary}
 
 These findings highlight the demand for a NeRF tool interface that is user-friendly, versatile, and capable of supporting a wide range of workflows and user expertise levels. 
-The ideal tool would combine intuitive project management and visualization features with powerful customization options, robust error handling and feedback mechanisms, and effective performance management capabilities.
+The optimal tool would integrate intuitive project management and visualization features with robust customization options, effective error handling and feedback mechanisms, and efficient performance management capabilities.

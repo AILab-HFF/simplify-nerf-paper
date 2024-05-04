@@ -6,9 +6,10 @@
 \section{System Architecture}
 \label{sec:system:architecture}
 
-The architecture follows a standard client-server pattern, with a service functioning as a wrapper for the nerfstudio CLI, and the client as a web application.
-The service is responsible for handling incoming requests from the client and translating them into commands that the nerfstudio CLI could understand.
-Requests from the client are sent to the service using HTTP, and, in the case of an asynchronous operation, the server updates the client using WebSockets \fref{sec:system:architecture}.
+The architectural design adheres to the conventional client-server paradigm, with the service acting as a wrapper for the Nerfstudio Command Line Interface (CLI) and the client as a web application.
+The service is responsible for handling incoming requests from the client and translating them into commands that the Nerfstudio CLI could understand.
+Requests from the client are transmitted to the service via HTTP.
+In the event of an asynchronous operation, the server updates the client via WebSockets. \fref{sec:system:architecture}.
 
 \begin{figure}[htb]
 	\includegraphics[width=\textwidth]{figures/architecture-1.png}
@@ -16,8 +17,8 @@ Requests from the client are sent to the service using HTTP, and, in the case of
 	\label{fig:system:example2}
 \end{figure}
 
-For the prototype, all components were composed into a single Docker \cite{noauthor_docker_2022} container and deployed as a single unit.
-This approach leveraged the pre-configured container provided by nerfstudio and allowed for a quick and easy deployment of the prototype.
+In the case of the prototype, all components were integrated into a single Docker \cite{noauthor_docker_2022} container and deployed as a single unit.
+This approach made use of the pre-configured container provided by Nerfstudio, facilitating a rapid and straightforward deployment of the prototype.
 
 \section{Frontend Development} 
 \label{sec:system:frontend}
@@ -29,7 +30,7 @@ Additionally, the daisyUI \cite{noauthor_daisyui_nodate} component library suppl
 
 \subsubsection{Extensibility}
 
-Extensibility was a key consideration during the development of the frontend, as the underlying nerfstudio CLI is in itself extendable.
+Extensibility was a key consideration during the development of the frontend, given that the underlying Nerfstudio CLI is in itself extensible.
 All parameters for processing and training a NeRF model are configurable using JSON or strongly typed TypeScript objects (see Listing \ref{lst:config}).
 
 \begin{lstlisting}[style=ES6, caption=Minimal parameter configuration for 'Steps Per Save' input., label=lst:config]
@@ -42,38 +43,38 @@ const stepsPerSave: NumberInput = {
 };
 \end{lstlisting}
 
-Currently, the supported input types are number, select, and boolean, but it is easy to add new types by extending the configuration object.
-It is also possible to define dependent parameters that are only shown when a certain condition is met.
-Images to illustrate the effect of a parameter can be added as well, to provide additional context to the user.
+The current input types supported are \texttt{number}, \texttt{select}, and \texttt{boolean}. 
+This covers all relevant parameters, but new types can be added by extending the configuration object. 
+It is also possible to define dependent parameters that are only shown when a certain condition is met. 
+Furthermore, images can be added to illustrate the effect of a parameter, providing additional context to the user.
 
-Filters and presets are also configurable using arrays of the names of the parameters that should be included in the filter or preset.
-The full configuration can be found in the \texttt{frontend/src/config} folder in the codebase.
+Additionally, filters and presets may be configured by specifying an array of the names of the parameters that should be included in the filter or preset.
+This is currently employed to narrow down the displayed options and expand them when activating advanced settings. 
+The complete configuration may be found in the \texttt{frontend/src/config} folder within the codebase.
 
 \subsubsection{Nerfstudio Viewer Integration}
 
-The nerfstudio viewer is built using Viser \cite{noauthor_nerfstudio-projectviser_2024}, a library for building 3D visualizations using python.
-This posed some limitations in integrating it into the frontend, as it is not easily possible to directly embed a python application into a web application.
-To work around this, the viewer was hosted by nerfstudio and embedded into the frontend using an iframe.
-
-Some modifications could be made to the viewer to make it more suitable for embedding.
-This included some simple styling changes to make the viewer fit better into the frontend.
-More complex changes were also made to improve the user experience.
-The viewer contained several interactions where it was necessary for the user to copy console commands, to be used in the CLI.
-These interactions were replaced with buttons that send a request to the server to execute the command instead.
-These modifications were done at build-time of the container by applying a patch to the nerfstudio source code of the base image.
+The Nerfstudio viewer is constructed using Viser \cite{noauthor_nerfstudio-projectviser_2024}, a Python library for developing 3D visualizations.
+This approach presented certain limitations in integrating it into the frontend, as it is not straightforward to embed a Python application directly into a web application.
+To circumvent this issue, the viewer is hosted by Nerfstudio and embedded into the frontend using an iframe.
+This included some simple styling changes to enhance the viewer's integration into the frontend.
+Additionally, modifications were implemented to enhance the user experience.
+The viewer contained several interactions where it was necessary for the user to copy console commands, which were to be used in the CLI.
+These interactions are replaced with buttons that send a request to the server to execute the command instead. 
+These modifications are applied at the build-time of the container by applying a patch to the Nerfstudio source code of the base image.
 
 The main shortcoming of this approach is that the frontend is unaware of the state of the viewer, and cannot update the UI based on actions triggered in the viewer.
-It has to rely on polling the server to get the current state of rendering processes to give feedback to the user.
+Instead, it must rely on periodic polling of the server to obtain the current status of rendering processes, which is then used to provide feedback to the user.
 
 \section{Backend Development}
 \label{sec:system:backend}
 
-The backend was built using tRPC \cite{noauthor_trpc_nodate}, a framework for building type-safe APIs in TypeScript.
-This type-safety was useful in building the API, as nerfstudio endpoints require a specific set of parameters of various types, that could be easily defined using TypeScript and reused in the frontend.
+The backend was constructed using tRPC \cite{noauthor_trpc_nodate}, a framework for developing type-safe APIs in TypeScript.
+This type-safety proved beneficial in the construction of the API, as nerfstudio endpoints necessitate a specific set of parameters of various types, which could be readily defined using TypeScript and reused in the frontend.
 
-A major concern for the backend was the handling of asynchronous operations.
-Processes can often take several minutes to complete, and the user should be able to see the progress of these operations.
-tRPC implement subscriptions, which allows the client to subscribe to an event and receive updates when that event occurs.
+It is often the case that processes can take several minutes to complete.
+In such instances, it is important that the user is able to see the progress of these operations.
+tRPC implements subscriptions, which allows the client to subscribe to an event and receive updates when that event occurs.
 This is used for any long-running operations, such as pre-processing or training a NeRF model (see Listing \ref{lst:trpc}).
 
 \begin{lstlisting}[style=ES6, caption=Example tRPC endpoint for Pre-Processing returning a subscription., label=lst:trpc]
@@ -100,10 +101,9 @@ export const nerfstudioRouter = router({
 });
 \end{lstlisting}
 
-Some additional endpoints were implemented using Express \cite{noauthor_express_nodate}.
-This includes the file upload and render endpoints, due to limitations in tRPC discussed in Section \ref{sec:system:challenges}.
+additional endpoints were implemented using Express \cite{noauthor_express_nodate}, including the file upload and render endpoints, due to limitations in tRPC discussed in Section \ref{sec:system:challenges}.
 
-All project related data is stored in a workspace directory, which is mounted as a volume in the docker container.
+All project related data is stored in a workspace directory, which is mounted as a volume in the Docker container.
 This allows for the data to persist between container restarts, and for the user to access the data outside of the container.
 
 \section{Challenges and Solutions}
@@ -111,48 +111,46 @@ This allows for the data to persist between container restarts, and for the user
 
 \subsection*{Limitations of tRPC}
 
-Although tRPC is a powerful tool for building APIs, with tight integration into the frontend, it is not without its limitations.
+Although tRPC is a highly effective tool for developing APIs, with seamless integration into the frontend, it is not without its limitations.
 It lacks support for \texttt{multipart/form-data} file uploads, which are necessary for uploading images and videos.
-This was solved by implementing a separate endpoint using Express, which is used to upload files to the server.
+This issue was addressed by implementing a distinct endpoint utilizing Express, which is employed for the purpose of uploading files to the server.
 
-The way tRPC handles subscriptions is also not ideal for long-running processes.
-If the client disconnects, the subscription is lost, and the client will lose the context for incoming events.
-A better solution could use a standard WebSocket connection, with the events containing the state necessary for the client to properly update the UI.
+Additionally, the manner in which tRPC handles subscriptions is not optimal for the execution of lengthy processes.
+In the event of a client disconnect, the subscription is lost, and the client will lose the context for incoming events.
+An improved solution would utilize a standard WebSocket connection, with the events containing the state necessary for the client to properly update the UI.
 
-tRPC does not have a client for Python, which is needed when processes are started from the nerfstudio viewer.
-This required the implementation of another separate endpoint using Express, which is called by the viewer to render the NeRF model.
-All these limitations could be solved by using a more general-purpose framework, such as Express.
+tRPC lacks a client for Python, which is required when processes are initiated from the Nerfstudio viewer.
+This necessitated the implementation of an additional distinct endpoint utilizing Express, which is invoked by the viewer to render the NeRF model.
+These limitations could be mitigated by the use of a more general-purpose framework, such as Express.
 
 \subsection*{Working with the nerfstudio CLI}
 
-Building the prototype against the nerfstudio CLI offered a useful layer of abstraction.
-This enabled rapid development, without having to worry about the underlying implementation details of a huge codebase.
-However, this abstraction comes at the cost of flexibility and overall complexity of the system.
+The implementation of the prototype using the nerfstudio CLI offered a useful layer of abstraction, enabling rapid development without the necessity to concern oneself with the underlying implementation details of a vast codebase.
+However, this abstraction comes at the cost of flexibility and the overall complexity of the system.
 
-The CLI is built using tyro \cite{yi_tyro_nodate}, a tool for building command line interfaces in Python using configuration objects.
-Efforts were made to translate the configuration objects into TypeScript objects, that could be used throughout the project.
-This would allow for a more seamless integration of the CLI.
-Sadly, this was not possible, as the configuration objects are not easily serializable, and would require a lot of additional work to implement.
-Thus the implemented solution has to rely on manually constructing the commands based on documentation, which is error-prone and not very maintainable.
-
+The CLI is constructed using tyro \cite{yi_tyro_nodate}, a tool for the creation of command line interfaces in Python utilising configuration objects.
+Efforts were made to translate the configuration objects into TypeScript objects that could be employed throughout the project.
+This would facilitate a more seamless integration of the CLI.
+Regrettably, this was not feasible, as the configuration objects are not readily serializable and would necessitate a significant amount of additional work to implement.
+Consequently, the implemented solution is reliant on manually constructing the commands based on documentation, which is error-prone and not particularly maintainable.
 \section{Future Directions}
 \label{sec:system:future}
 
 \subsection*{Improved CLI Integration}
 
-As outlined above, the approach of wrapping the nerfstudio CLI with a custom API has some limitations.
-A more integrated and robust solution would be built within the nerfstudio codebase itself.
-It might be able to reuse the existing configuration object, used for CLI, to build a REST API.
-This would allow for a more seamless integration of the CLI into the frontend, and would allow for more flexibility in the future.
-It would also reduce the overall complexity of the system, as it would not require a separate server to handle requests.
+As outlined above, the approach of wrapping the Nerfstudio CLI with a custom API has some limitations.
+A more integrated and robust solution would be to built within the Nerfstudio codebase itself.
+It is conceivable that the existing configuration object, utilized for the CLI, could be repurposed to construct a REST API.
+This would facilitate a more seamless integration of the CLI into the frontend, and would allow for greater flexibility in the future.
+Furthermore, this approach would reduce the overall complexity of the system, as it would not require the use of a separate server to handle requests.
 
 \subsection*{Improved Viewer Integration}
 
-The current approach of embedding the viewer in an iframe is not ideal.
-The nerfstudio viewer in version 0.3.4 and earlier, was built using React with a direct integration of Viser.
-With the first major release of nerfstudio, the viewer was rewritten in Python, and the React integration was removed.
+The current approach of embedding the viewer in an iframe is not optimal.
+The Nerfstudio viewer in versions 0.3.4 and earlier was constructed using React with a direct integration of Viser.
+In its first major release, nerfstudio rewrote the viewer in Python, thereby eliminating the React integration.
 
-Re-building this projects frontend with a framework such as Viser, would be very limiting in terms of features and flexibility.
-A better solution would be to integrate Viser into the frontend, akin to the original nerfstudio viewer.
-This integration would allow for a more seamless interaction between the frontend and the viewer, and improve the overall user experience.
-UI elements could be re-used to ensure a consistent look and feel, and the frontend could react to events triggered in the viewer.
+The reconstruction of this project's frontend with a framework such as Viser would be severely constrained in terms of features and flexibility.
+A more optimal solution would be to integrate Viser into the front end, analogous to the original nerfstudio viewer.
+Such an integration would facilitate a more seamless interaction between the frontend and the viewer, thereby enhancing the overall user experience.
+The re-use of UI elements would ensure a consistent look and feel, while the frontend could react to events triggered in the viewer.
