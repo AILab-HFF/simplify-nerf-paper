@@ -2,5 +2,11 @@
   "editor.wordWrap": "bounded",
   "latex-workshop.bibtex-format.sort.enabled": true,
   "latex-workshop.intellisense.citation.label": "title",
-  "latex-workshop.intellisense.citation.backend": "biblatex"
+  "latex-workshop.intellisense.citation.backend": "biblatex",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk (xelatex)",
+      "tools": ["xelatexmk"]
+    }
+  ]
 }

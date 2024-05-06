@@ -341,7 +341,7 @@
 % Text Format
 % **************************************************
 \setstretch{1.2}					% value for line spacing, use \setstretch{} or \singlespacing or \onehalfspacing or \doublespacing
-%\setlength{\parindent}{0em}			% value for paragraph indentation
+% \setlength{\parindent}{0em}			% value for paragraph indentation
 \clubpenalty = 10000				% prevent single lines at the beginning of a paragraph (Schusterjungen)
 \widowpenalty = 10000				% prevent single lines at the end of a paragraph (Hurenkinder)
 \displaywidowpenalty = 10000		%
@@ -598,7 +598,7 @@
 \setkomafont{section}{\thesissectionfont} % for section entries
 \setkomafont{subsection}{\thesissubsectionfont} % for section entries
 \addtokomafont{subsubsection}{\tgherosfont}
-%\addtokomafont{paragraph}{\tgherosfont}
+% \addtokomafont{paragraph}{\tgherosfont}
 \setkomafont{paragraph}{\thesisparagraphfont}
 
 %\setkomafont{subsection}{\large} % for subsection entries
@@ -751,3 +751,6 @@
 
 
 
+
+% custom paragraph style 
+\newcommand{\cleanparagraph}[1]{\textbf{\thesisparagraphfont #1.}\;}

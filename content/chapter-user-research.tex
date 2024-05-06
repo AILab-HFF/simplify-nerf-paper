@@ -30,7 +30,7 @@ The insights gained from this initial research phase were instrumental in shapin
 \label{sec:user-research:findings}
 
 
-\paragraph{NeRF in the Film Industry}
+\cleanparagraph{NeRF in the Film Industry}
 NeRF technology is being explored for various applications in the film industry, including visual effects, virtual production, and pre-production location scouting. 
 Despite its potential to simplify the creation of 3D scenes, current limitations in model quality, lack of editable models, and insufficient detail hinder its professional use. 
 However, its capability for rapid 3D scene captures offers significant benefits for pre-visualization and planning in the pre-production phase, although concerns about model scale accuracy for export remain. 
@@ -40,7 +40,7 @@ However, its capability for rapid 3D scene captures offers significant benefits 
 \footnotetext{Also in der Planungsphase kam [NeRF] glaube ich ziemlich gut an, Setbegehung, Planung vorne vom eigentlichen Dreh, aber die Qualität war halt noch nicht so überzeugend.}
 
 
-\paragraph{Optimizing Parameters and Workflow}
+\cleanparagraph{Optimizing Parameters and Workflow}
 Creating NeRFs typically involves three main steps: pre-processing input data, training models, and exporting outputs. 
 Technical users emphasize the importance of parameter optimization in improving NeRF quality, with iterative training and results analysis being crucial parts of their workflow.
 Tools such as TensorBoard \cite{noauthor_tensorflowtensorboard_2024} are utilized for quantifying variations in training outcomes. 
@@ -50,7 +50,7 @@ Tools such as TensorBoard \cite{noauthor_tensorflowtensorboard_2024} are utilize
 \footnotetext{Probleme? Optimisierung, also Datensätze.
 Beim Training würde ich sagen, eine gro{\ss}e Sache ist die Optimierung und die Parameterisierung, vor allem in Nerfstudio.}
 
-\paragraph{User Interface and Accessibility}
+\cleanparagraph{User Interface and Accessibility}
 A consensus among users indicates a clear need for an intuitive, comprehensive user interface that minimizes reliance on console commands.
 Features that allow users to visually navigate and control the NeRF creation pipeline, including real-time progress feedback and the ability to pause and adjust processes at any stage, are highly valued. 
 \cite{P1, P2, P3}
@@ -58,7 +58,7 @@ Features that allow users to visually navigate and control the NeRF creation pip
 \cleanchapterquote{The most important thing for me would be that I don't have to do anything in the console. In other words, that I can simply start the program and then do everything in the UI, upload it and then it will be executed somehow.\footnotemark}{Participant 2}{}
 \footnotetext{Das Wichtigste wäre für mich, dass ich halt nichts in der Konsole machen muss. Also, dass ich einfach das Programm starte und dann alles in der UI machen kann, hochladen und dann auch irgendwie durchgeführt werde.}
 
-\paragraph{Comprehensive Error Handling and Visualization}
+\cleanparagraph{Comprehensive Error Handling and Visualization}
 Effective error feedback and clear, informative visualization tools are critical for user satisfaction. 
 Users have expressed frustration with vague error messages and cumbersome command-line interactions for troubleshooting and adjustments. 
 \cite{P2, P3}
@@ -66,17 +66,17 @@ Users have expressed frustration with vague error messages and cumbersome comman
 \cleanchapterquote{So if there is an error message, then it would be cool if they would somehow tell you more precisely what the error is, and not just any log.\footnotemark}{Participant 2}{}
 \footnotetext{Also wenn eine Fehlermeldung ist, dann wäre es halt cool, wenn die einem das irgendwie genauer sagen würden, was der Fehler ist, und dann nicht einfach so irgendein Log.}
 
-\paragraph{File Management and Project Structure}
+\cleanparagraph{File Management and Project Structure}
 Efficient file and project management, with clear distinctions between different stages and support for various input formats, is essential. 
 Users discuss challenges with current tools regarding data organization, suggesting improvements for handling input data and managing projects​​.
 \cite{P1, P3}
 
-\paragraph{Integration and Export Options}
+\cleanparagraph{Integration and Export Options}
 Strong integration capabilities with popular 3D and VFX software and flexible export options are desired. 
 Users discuss the importance of being able to easily import NeRF-generated scenes into tools like Unreal Engine \cite{noauthor_unreal_nodate} or Blender \cite{noauthor_blender_nodate} for further processing and use in production-quality projects​​.
 \cite{P1, P2, P4}
 
-\paragraph{Multi-Mode Operation}
+\cleanparagraph{Multi-Mode Operation}
 The necessity for multi-mode operation in NeRF tool interfaces emerges as a significant insight, underscoring the importance of accommodating a broad spectrum of users, from novices to experts. 
 A simplified mode is proposed to cater to beginners, offering an intuitive and streamlined workflow.
 In contrast, an advanced mode is tailored for experienced users requiring detailed control over the NeRF creation process. 
