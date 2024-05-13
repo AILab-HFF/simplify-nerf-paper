@@ -31,7 +31,7 @@ This excerpt from the site map (Figure \ref{fig:design:flow-2}) illustrates the 
 \begin{figure}[htb]
   \centering
   \includegraphics[width=.8\textwidth]{figures/flow-2.png}
-  \caption{Excerpt of a view from the flow diagram with detailed interactions}
+  \caption{Excerpt of a view from the flow diagram with detailed interactions.}
   \label{fig:design:flow-2}
 \end{figure}
 
@@ -45,7 +45,7 @@ At this stage, emphasis was placed on the placement of key elements, usability, 
 \begin{figure}[h!]
   \centering
   \includegraphics[width=.8\textwidth]{figures/wireframe.png}
-  \caption{Wireframe of the pre-processing section, showing the layout and key interaction elements}
+  \caption{Wireframe of the pre-processing section, showing the layout and key elements.}
   \label{fig:design:wireframe}
 \end{figure}
 
@@ -72,7 +72,7 @@ When creating a new project, users are redirected to the project section.
 \begin{figure}[htb]
   \centering
   \includegraphics[width=.65\textwidth]{figures/view-overview.png}
-  \caption{Dashboard overview, showing existing projects (1) and the option to create a new project (2)}
+  \caption{Dashboard overview, showing existing projects (1) and the option to create a new project (2).}
   \label{fig:design:dashboard}
 \end{figure}
 
@@ -86,19 +86,19 @@ In all sections, users can monitor their progress through a progress indicator l
 
 The input section combines the first few interactions, as mapped out in the user flow diagram.
 Initially, users are prompted to upload their input data, which can be done by either dragging and dropping files into the browser window or by clicking a button to open a file dialog \frefadd{fig:design:input-section}{2}.
-Files may be either a set of images or a video. To ensure the input data is valid, certain guardrails are in place.
+Files may be either a set of images or a video. To ensure the input data is valid, certain guardrails are in place, such as file type restrictions.
 Once the input data has been uploaded, it must be processed before it can be used for training purposes.
 
 \begin{figure}[h!]
   \centering
   \includegraphics[width=.65\textwidth]{figures/view-process.png}
-  \caption{Pre-processing section, showing the progress bar (1), input data upload (2), parameter options (3), pre-processed data list (4), and console output (5)}
+  \caption{Pre-processing section, showing the progress bar (1), input data upload (2), parameter options (3), pre-processed data list (4), and console output (5).}
   \label{fig:design:input-section}
 \end{figure}
 
 The pre-processing can be configured by the user, which includes parameters such as the lens type or matching method \frefadd{fig:design:input-section}{3}.
 The parameter input fields vary based on the type of input data and are only shown when relevant. 
-Additionally, a tooltip is provided for each parameter, which explains its purpose. 
+Additionally, a tooltip is provided for each parameter, explaining its purpose. 
 Furthermore, advanced settings can be accessed by hovering over the question mark next to the parameter name.
 For advanced users, the settings can be further customized by activating the advanced settings using the toggle in the top right \fref{fig:design:advanced-settings}.
 Once the user is satisfied with the settings, they can initiate the pre-processing. The user will then be able to observe the progress of the pre-processing through a console that displays the output of the process running on the server \frefadd{fig:design:input-section}{5}.
@@ -107,7 +107,7 @@ Upon completion of the pre-processing stage, the user may then proceed to the tr
 \begin{figure}[h!]
   \centering
   \includegraphics[width=.65\textwidth]{figures/view-extended-options.png}
-  \caption{Advanced settings for pre-processing, showing additional parameters and options}
+  \caption{Advanced settings for pre-processing, showing additional parameters and options.}
   \label{fig:design:advanced-settings}
 \end{figure}
 
@@ -122,7 +122,7 @@ Once the user is satisfied with the configuration, they can start the training p
 \begin{figure}[h!]
   \centering
   \includegraphics[width=.65\textwidth]{figures/view-train.png}
-  \caption{Training section, showing the training configuration form (1), and previous training runs (2)}
+  \caption{Training section, showing the training configuration form (1), and previous training runs (2).}
   \label{fig:design:training-section}
 \end{figure}
 
@@ -141,6 +141,6 @@ Due to the narrow layout of the page, the viewer can be conveniently opened in a
 \begin{figure}[h!]
   \centering
   \includegraphics[width=.65\textwidth]{figures/view-viewer.png}
-  \caption{Viewer section, showing the Nerfstudio viewer (1) and list of rendered outputs (2)}
+  \caption{Viewer section, showing the Nerfstudio viewer (1) and list of rendered outputs (2).}
   \label{fig:design:viewer-section}
 \end{figure}

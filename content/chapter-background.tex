@@ -10,8 +10,7 @@ The objective of view synthesis is to generate realistic and accurate representa
 
 \cleanparagraph{Image-Based Rendering Techniques}
 Image-based rendering (IBR) techniques focus on synthesizing new views of a scene using pre-captured images, with minimal reliance on geometric models.
-The fundamental principle of IBR is to directly utilize the radiance information captured in these images, manipulating it to generate new viewpoints without the necessity for detailed 3D reconstruction.
-This approach is particularly advantageous in scenarios where fast rendering is necessary or when accurate geometric data is unavailable.
+The fundamental principle of IBR is to directly utilize radiance information captured in these images, manipulating it to generate new viewpoints without the necessity for detailed 3D reconstruction.
 IBR methods are distinguished by their capacity to generate photorealistic results, as they accurately capture lighting, shadows, and reflections in accordance with the original scene \fref{fig:background-ibr}.
 These methods, such as those employing light fields or lumigraphs, are particularly suited to applications where visual realism is of critical importance, as they are able to efficiently simulate the complexity of real-world lighting and textures \cite{buehler_unstructured_2001,chen_view_1993,debevec_modeling_1996,gortler_lumigraph_1996,levoy_light_1996}.
 
@@ -27,7 +26,7 @@ These methods, such as those employing light fields or lumigraphs, are particula
 Volumetric rendering techniques construct a 3D volume of the scene, often represented as a grid of voxels.
 Each voxel contains data such as color and opacity, which contribute to the final image through a process akin to 3D texturing \fref{fig:background-volumetric}.
 Unlike surface-based modeling, which requires explicit surfaces, volumetric methods fill the entire data space, allowing for the handling of complex phenomena like fog, clouds, and fire, which do not have clear boundaries.
-This approach is advantageous when the scene involves intricate details and volumetric phenomena that traditional polygon-based rendering might struggle to capture accurately. Volumetric methods often employ techniques such as voxel coloring to integrate multiple images into a cohesive 3D model \cite{curless_volumetric_1996,seitz_photorealistic_1999}.
+This approach is advantageous when the scene involves intricate details and volumetric phenomena that traditional polygon-based rendering might struggle to capture accurately. \cite{curless_volumetric_1996,seitz_photorealistic_1999}.
 
 \begin{figure}[h!]
   \centering
@@ -48,7 +47,7 @@ These models facilitate the synthesis of intermediate views by interpolating bet
 \cleanparagraph{Learning Volumetric Representations}
 Recent advances in neural view synthesis have explored volumetric representations as a means of effectively encoding 3D scene information.
 This approach employs deep learning to construct volumetric grids or embeddings that capture both color and spatial data, thereby enabling dynamic and realistic rendering of new views \fref{fig:background-neural-volumetric}.
-Such volumetric techniques represent a significant departure from traditional modeling, as they provide a framework where 3D features are embedded directly into the network. This enables sophisticated scene understanding and rendering without the need for explicit geometric reconstruction \cite{lombardi_neural_2019,sitzmann_deepvoxels_2019}.
+Such techniques represent a significant departure from traditional modeling, as they provide a framework where 3D features are embedded directly into the network. This enables sophisticated scene understanding and rendering without the need for explicit geometric reconstruction \cite{lombardi_neural_2019,sitzmann_deepvoxels_2019}.
 
 \begin{figure}[h!]
   \centering
@@ -85,10 +84,10 @@ This method diverges from traditional discrete representations like voxel grids 
 \cleanparagraph{Implementation}
 NeRF synthesizes views by querying a five-dimensional coordinate space—comprising spatial locations \((x, y, z)\) and viewing directions \((\theta, \phi)\) along camera rays \frefadd{fig:nerf-overview}{a}.
 Classic volume rendering techniques are then applied to convert the output densities and colors into images.
-At the core of this process lies a Multilayer Perceptron (MLP), a type of neural network characterized by layers of interconnected nodes which process input data sequentially from input to output.
+At the core of this process lies a Multilayer Perceptron (MLP), a type of neural network characterized by layers of interconnected nodes processing input data sequentially from input to output.
 The MLP in NeRF takes sampled 3D points and corresponding viewing directions as input and outputs the color and volume density \frefadd{fig:nerf-overview}{b}.
 This output is then composited into a 2D image using volume rendering techniques \frefadd{fig:nerf-overview}{c}.
-Because this rendering function is differentiable, NeRF uses gradient descent to minimize the difference between synthesized images and observed ground truth, optimizing the neural representation of the scene \frefadd{fig:nerf-overview}{d}.
+As the rendering function is differentiable, NeRF uses gradient descent to minimize the difference between synthesized images and observed ground truth, optimizing the neural representation of the scene \frefadd{fig:nerf-overview}{d}.
 
 \begin{figure}[h!]
   \centering
@@ -108,7 +107,7 @@ The landscape of NeRF has been expanded by several innovative extensions that en
 NeRF frameworks with user interfaces have emerged, enabling users to explore and manipulate 3D scenes \cite{muller_instant_2022,tancik_nerfstudio_2023}.
 These frameworks provide features such as real-time scene rendering, adjustable training parameters, and the creation of camera trajectories for video rendering.
 Recent advancements have introduced text-based manipulation, allowing users to edit and transform scenes through natural language descriptions \cite{bao_sine_2023,bar-tal_text2live_2022,haque_instruct-nerf2nerf_2023,jan-niklas_dihlmann_signerf_2024,wang_clip-nerf_2022}.
-Another area of development is in color and appearance editing, where new methods enable adjustments of scene colors, consistent across varying views \cite{wu_palettenerf_2022}.
+Another area of development is color and appearance editing, where new methods enable adjustments of scene colors, consistent across varying views \cite{wu_palettenerf_2022}.
 Additionally, some tools have integrated mesh editing capabilities, enhancing the geometric manipulation within NeRF-generated scenes \cite{yuan_nerf-editing_2022}.
 These enhancements not only extend the functional range of NeRF but also significantly improve their application in creative industries.
 
