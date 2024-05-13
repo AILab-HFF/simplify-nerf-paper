@@ -47,10 +47,10 @@ The technical development of a web-based NeRF editor introduces specific challen
 
 \cleanparagraph{Remote Operation} NeRF processing is a computationally intensive task, typically requiring the processing to be offloaded to a server.
 The prototype leverages a client-server architecture to enable users to manage NeRF-related tasks through a web browser efficiently (see Section~\ref{sec:system:architecture}).
-    
+ 
 \cleanparagraph{Real-Time Feedback} To enhance the user experience, immediate feedback on user actions is crucial.
 The prototype employs WebSockets to establish a real-time connection between the client and server, facilitating instant updates on the status of the ongoing processes (see Section~\ref{sec:user-research:findings}).
-    
+ 
 \cleanparagraph{Integration with Existing Frameworks} Integrating the web-based editor with Nerfstudio presents significant technical challenges.
 Currently, the server-side interactions are constrained to command-line interface commands, which complicates maintainability and limits deeper integration.
 Direct integration could circumvent the need for makeshift solutions such as parsing log statements for progress tracking.
@@ -85,14 +85,15 @@ This makes NeRF a valuable tool for low-budget productions or independent filmma
 \cleanparagraph{Innovative Applications}
 The potential of NeRF also inspired creative ideas among participants of the user study with a background in film.
 This included suggestions for virtual art exhibitions or highly stylized camera movements for advertisements.
-The enthusiasm of participants for exploring these new possibilities suggests that NeRF has the potential to drive innovation within the film and visual effects industry. Further exploration of this area is therefore warranted.   
+The enthusiasm of participants for exploring these new possibilities suggests that NeRF has the potential to drive innovation within the film and visual effects industry.
+Further exploration of this area is therefore warranted.
 
 \cleanparagraph{Conerns and Limitations}
 One significant concern raised by professionals in the film industry is the quality of NeRF models.
 These models frequently contain artifacts and noise that can be challenging to remove, particularly in complex scenes, rendering them unsuitable for high-quality production.
 During the user study, other limitations became apparent, including the static nature of the generated images and the quality of the output.
 The lack of a time dimension represents a significant limitation for the dynamic nature of film and video production.
-Although there have been some recent developments in the field of NeRF models that allow for the addition of motion  \cite{fridovich-keil_k-planes_2023}, the results remain limited and do not match the fidelity of static NeRF models.
+Although there have been some recent developments in the field of NeRF models that allow for the addition of motion \cite{fridovich-keil_k-planes_2023}, the results remain limited and do not match the fidelity of static NeRF models.
 
 \cleanparagraph{Accessibility and Adoption}
 Although the tool developed in this study was the initial point of contact for some filmmakers with NeRF technology, they were able to use it with confidence and saw potential for its use in production.
@@ -137,7 +138,7 @@ Further testing and refinement are necessary to ensure that the changes address 
 
 \cleanparagraph{Improved Navigation}
 To address the confusion in navigation to the dashboard, a dedicated button was added to the navigation bar.
-This feature has should improved the clarity of  navigation to users significantly \fref{fig:fix-1}.
+This feature has should improved the clarity of navigation to users significantly \fref{fig:fix-1}.
 
 \begin{figure}[htb]
   \centering
