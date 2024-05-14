@@ -91,7 +91,7 @@ Further exploration of this area is therefore warranted.
 \cleanparagraph{Conerns and Limitations}
 One significant concern raised by professionals in the film industry is the quality of NeRF models.
 These models frequently contain artifacts and noise that can be challenging to remove, particularly in complex scenes, rendering them unsuitable for high-quality production.
-During the user study, other limitations became apparent, including the static nature of the generated images and the quality of the output.
+During the user study, other limitations became apparent, including the static nature of the generated images.
 The lack of a time dimension represents a significant limitation for the dynamic nature of film and video production.
 Although there have been some recent developments in the field of NeRF models that allow for the addition of motion \cite{fridovich-keil_k-planes_2023}, the results remain limited and do not match the fidelity of static NeRF models.
 
@@ -142,7 +142,7 @@ This feature should improve the clarity of navigation to users significantly \fr
 
 \begin{figure}[htb]
   \centering
-	\includegraphics[width=0.6\textwidth]{figures/fix-1.png}
+	\includegraphics[width=0.5\textwidth]{figures/fix-1.png}
 	\caption{Dedicated Button for Dashboard Navigation.}
   \label{fig:fix-1}
 \end{figure}
@@ -162,7 +162,7 @@ The project creation process was moved into a modal dialog, which not only elimi
 
 \begin{figure}[htb]
   \centering
-	\includegraphics[width=.9\textwidth]{figures/fix-3.png}
+	\includegraphics[width=.8\textwidth]{figures/fix-3.png}
 	\caption{Modal Dialog for Project Creation.}
   \label{fig:fix-3}
 \end{figure}
@@ -178,19 +178,30 @@ This solution is likely to prevent many of the issues users encountered when upl
 \begin{figure}[htb]
   \begin{subfigure}{\textwidth}
     \centering
-    \includegraphics[width=.9\linewidth]{figures/fix-4.1.png}
+    \includegraphics[width=.8\linewidth]{figures/fix-4.1.png}
     \caption{Initial State}
   \end{subfigure}
   \begin{subfigure}{\textwidth}
     \centering
-    \includegraphics[width=.9\linewidth]{figures/fix-4.2.png}
+    \includegraphics[width=.8\linewidth]{figures/fix-4.2.png}
     \caption{File Selected}
   \end{subfigure}
   \begin{subfigure}{\textwidth}
     \centering
-    \includegraphics[width=.9\linewidth]{figures/fix-4.3.png}
+    \includegraphics[width=.8\linewidth]{figures/fix-4.3.png}
     \caption{File Uploaded}
   \end{subfigure}
 	\caption{Improved File Upload Process.}
   \label{fig:fix-4}
+\end{figure}
+
+\cleanparagraph{Disabling Background Animations}
+A potential concern for some participants was the presence of background animations, which could be distracting to some users.
+To address this, an option was added to disable background animations in a sub-menu accessible in the header \fref{fig:fix-5}.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=.5\textwidth]{figures/fix-5.png}
+  \caption{Option to Disable Background Animations.}
+  \label{fig:fix-5}
 \end{figure}

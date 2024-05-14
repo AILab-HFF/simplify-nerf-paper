@@ -107,7 +107,7 @@ export const nerfstudioRouter = router({
 \end{lstlisting}
 \end{figure}
 
-additional endpoints were implemented using Express \cite{noauthor_express_nodate}, including the file upload and render endpoints, due to limitations in tRPC discussed in Section \ref{sec:system:challenges}.
+Some additional endpoints were implemented using Express \cite{noauthor_express_nodate}, including the file upload and render endpoints, due to limitations in tRPC discussed in Section \ref{sec:system:challenges}.
 
 All project related data is stored in a workspace directory, which is mounted as a volume in the Docker container.
 This allows for the data to persist between container restarts, and for the user to access the data outside of the container.
@@ -157,6 +157,6 @@ The Nerfstudio viewer in versions 0.3.4 and earlier was constructed using React 
 In its first major release, nerfstudio rewrote the viewer in Python, thereby eliminating the React integration.
 
 The reconstruction of this project's frontend with a framework such as Viser would be severely constrained in terms of features and flexibility.
-A more optimal solution would be to integrate Viser into the front end, analogous to the original nerfstudio viewer.
+A more optimal solution would be to integrate Viser into the frontend, analogous to the original nerfstudio viewer.
 Such an integration would facilitate a more seamless interaction between the frontend and the viewer, thereby enhancing the overall user experience.
 The re-use of UI elements would ensure a consistent look and feel, while the frontend could react to events triggered in the viewer.
